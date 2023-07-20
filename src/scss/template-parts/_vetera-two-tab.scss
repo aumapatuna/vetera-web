@@ -1,0 +1,111 @@
+/* Two tab styles - mobile in default */
+.vetera-two-tab {
+    position: relative;
+    overflow-x: hidden;
+    
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: block;
+        content: "";
+        background: none;
+        z-index: -2;
+    }
+
+    &--home {
+
+        &:after {
+            background: #F0FCFF;
+        }
+    }
+
+    .container {
+
+        /* Two tab container styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            width: 680px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    /* Tabs styles */
+    #tabs {
+        .tabs-devider {
+            border-color: var(--color-lightblue);
+        }
+    }
+
+    /* Tabs styles */
+    .tabs {
+        /* Tabs header styles */
+        &__headers {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 0;
+
+            /* Tabs header styles - Desktop styles */
+            @include media-breakpoint-up(dt) {
+                display: block;
+                grid-template-columns: none;
+            }
+
+            &:after {
+                /* Tabs header styles - Desktop styles */
+                @include media-breakpoint-up(dt) {
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    bottom: 0;
+                    left: 0;
+                    height: 1px;
+                    width: 100%;
+                    background-color: var(--color-darkergray2);
+                    z-index: -1;
+                }
+            }
+
+            /* Tabs header item styles */
+            &__item {
+                border-bottom: 2px solid transparent;
+
+                @include media-breakpoint-down(tb) {
+                    margin-left: 10px;
+                }
+
+                /* Tabs header styles - Desktop styles */
+                @include media-breakpoint-up(dt) {
+                    display: inline-block;
+                    padding: 0 25px;
+                }
+
+                &:first-child {
+
+                    @include media-breakpoint-down(tb) {
+                        margin-left: 0;
+                    }
+                }
+
+                a {
+                    display: block;
+                    font-family: var(--font-family-latoregular);
+                    font-size: var(--txt-md-bold-font-size);
+                    color: var(--color-oxford-blue);
+                }
+            }
+
+            /* Tabs header item active styles */
+            &__item.ui-state-active {
+                border-bottom: 2px solid var(--color-imperial-blue);
+
+                a {
+                    color: var(--color-imperial-blue);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,106 @@
+/* Careers our offices styles - mobile in default */
+.vetera-careers-offices {
+    position: relative;
+    background-color: var(--color-blue1);
+    min-height: 870px;
+    overflow: hidden;
+
+    @include media-breakpoint-up(tb) {
+        display: flex;
+        align-items: center;
+        min-height: 350px;
+    }
+
+    /* Container styles */
+    .container {
+        position: relative;
+        z-index: 1;
+
+        /* Container styles - Desktop styles */
+        @include media-breakpoint-up(tb) {
+            width: 50%;
+        }
+
+        /* Container styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            width: 916px;
+        }
+    }
+
+    /* Careers our background image styles */
+    &__bg-image {
+        position: absolute;
+        display: block;
+        content: "";
+        top: auto;
+        bottom: 100px;
+        right: 0;
+        min-height: 506px;
+        height: auto;
+        min-width: 375px;
+        width: 100%;
+        background-image: url(assets/images/careers/vetera_map_mobile.svg);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: contain;
+        z-index: 0;
+        object-fit: cover;
+
+        /* Careers our background image styles - Desktop styles */
+        @include media-breakpoint-up(tb) {
+            top: 15px;
+            bottom: auto;
+            min-height: 330px;
+            min-width: 1083px;
+            right: -200px;
+            bottom: auto;
+            min-height: 328px;
+            background-image: url(assets/images/careers/vetera_map_web.svg);
+            background-position: top right;
+        }
+
+        /* Careers our background image styles - Desktop styles */
+        @media (min-width: 1200px) and (max-width: 1599px) {
+            right: -200px;
+            min-height: 455px;
+        }
+
+        /* Careers our background image styles - Desktop styles */
+        @media (min-width: 1600px) {
+            right: -100px;
+            min-height: 455px;
+        }
+    }
+
+    /* Careers our offices cards styles */
+    &__cards {
+        padding-top: 296px;
+
+        /* Careers our offices cards styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 40px;
+            padding-top: 96px;
+        }
+
+        /* Careers our offices cards block 2 styles */
+        .grid-block.blk-2 {
+
+            /* Careers our offices cards block 2 styles - Desktop styles */
+            @include media-breakpoint-up(dt) {
+                margin-top: 390px;
+            }
+        }
+    }
+
+    /* Careers our offices card paddings styles */
+    .vetera-comp-office-gallery-card {
+        margin: 0 16px 24px;
+    }
+
+    /* Lightbox gallery styles */
+    .lightbox-gallery {
+        display: none;
+    }
+}

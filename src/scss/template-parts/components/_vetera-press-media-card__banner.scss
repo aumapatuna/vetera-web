@@ -1,0 +1,31 @@
+.vetera-press-media-card__banner {
+  width: 100%;
+  height: auto;
+  padding-top: 70%;
+    position: relative;
+}
+
+.vetera-press-media-card__banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.vetera-press-media-card__grid {
+  display: grid;
+  row-gap: 36px;
+}
+
+@include media-breakpoint-up(dt) {
+  .vetera-press-media-card__grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 108px;
+  }
+  
+  .vetera-press-media-card__banner {
+    padding-top: 60%;
+  }
+}

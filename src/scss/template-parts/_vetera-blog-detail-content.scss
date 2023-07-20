@@ -1,0 +1,118 @@
+/* Blog detail content */ 
+.vetera-blog-detail-content {
+
+    @include media-breakpoint-up(tb) {
+        max-width: 680px;
+        margin: 0 auto;
+    }
+
+    /* Blog info */ 
+    &__info {
+
+        /* List */ 
+        &__list {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* List item */ 
+        &__list-item {
+            display: inline-flex;
+
+            @include media-breakpoint-up(tb) {
+                margin-right: 32px;
+            }
+
+            &:first-child {
+                display: inline-flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+
+                @include media-breakpoint-up(tb) {
+                    width: auto;
+                }
+            }    
+
+            &:nth-child(2) {
+                display: inline-block;
+                margin-right: 32px;
+            }
+
+            @include media-breakpoint-up(tb) {
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+    }
+
+    /* Author info */ 
+    &__author-info {
+        border-top: 1px solid var(--color-lightblue);
+        
+        @include media-breakpoint-down(tb) {
+            p {
+                text-align: center;
+            }
+        }
+        
+    }
+
+    /* Main block images */ 
+    &__main {
+
+        p {
+            color: var(--color-darkash);
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        figure,
+        .wp-block-image {
+            margin: 24px 0;
+        }
+
+        ul {
+            padding-left: 10px;
+            padding-bottom: 16px;
+
+            li {
+                position: relative;
+                padding-left: 44px;
+                color: var(--color-darkash);
+
+                &:after {
+                    position: absolute;
+                    top: 6px;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    content: '';
+                    display: block;
+                    background-color: transparent;
+                    background-image: url("assets/images/check_circle.svg");
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+
+    .wpcf7 form .wpcf7-response-output {
+        margin: 3.5em 0.5em 1em;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: transparent;
+        color: var(--color-white);
+        font-size: 12px;
+        line-height: 12px;
+    }
+}

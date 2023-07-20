@@ -1,0 +1,76 @@
+/* Client records component styles - mobile in default */ 
+.vetera-comp-client-records {
+    /* Grid styles */
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 0;
+
+        /* Grid styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 32px;
+            justify-items: start;
+        }
+    }
+
+    /* Section symbol */
+    &__symbol {
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        margin: 0 auto;
+
+        /* Grid styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    /* Section image */
+    &__img-blk {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    &__image {
+        position: relative;
+        max-width: 467px;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 4px;
+        float: left;
+
+        @include media-breakpoint-up(dt) {
+            margin-bottom: 0 !important;
+        }
+
+        &__dark-bg {
+            position: absolute;
+            display: block;
+            content: "";
+            bottom: -73px;
+            width: 75%;
+            height: 79%;
+            background-color: var(--color-lightblue);
+            border-radius: 4px;
+            max-width: 389px;
+            z-index: -1;
+            right: 0;
+        }
+
+        img {
+            width: 90%;
+            height: auto;
+
+            @include media-breakpoint-up(dt) {
+                float: right;
+            }
+        }
+    }
+}

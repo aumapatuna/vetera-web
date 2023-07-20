@@ -1,0 +1,31 @@
+/* Integration details recommended styles - mobile in default */
+.vetera-integration-details-recommended {
+    position: relative;
+
+    /* Integration details recommended content wrap styles */
+    &__wrp {
+        position: relative;
+
+        .container {
+            position: relative;
+
+            /* Integration details recommended card wrap styles - Desktop */
+            @include media-breakpoint-up(dt) {
+                width: 683px;
+                margin: 0 auto;
+            }
+        } 
+    }
+
+    /* Integration details recommended card wrap styles */
+    &__logo-cards-wrp {
+        position: relative;
+
+        /* Integration details recommended card wrap styles - Desktop */
+        @include media-breakpoint-up(dt) {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-gap: 20px;
+        }
+    }
+}

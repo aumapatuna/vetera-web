@@ -1,0 +1,733 @@
+/* Form control styles */
+.ampli-form-newsletter {
+  position:relative;
+
+  button {
+    position: absolute;
+    top: 3px;
+    right: 4px;
+  }
+}
+
+.require {
+  color: var(--color-torch-red);
+}
+
+.form-control {
+  appearance: none;
+}
+
+.form-control {
+  width: 100%;
+  height: auto;
+  font-size: 22px;
+  line-height: 34px;
+  color: #29293D;
+  background-color: transparent;
+  border-radius: 3px;
+  padding: 12px 4px 12px 36px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  box-shadow: 0px 1px 5px rgba(17, 17, 17, 0.03);
+  border: 1px solid rgba(179, 187, 224, 0.15);
+  border-radius: 4px 6px 6px 6px;
+}
+
+.field {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 24px;
+  display: inline-block;
+  vertical-align: top;
+
+  /* Field styles - Desktop styles */
+  @include media-breakpoint-up(dt) {
+    width: 374px;
+  }
+}
+
+.field.address,
+.field.message {
+
+  /* Field width styles - Desktop styles */
+  @include media-breakpoint-up(dt) {
+    width: 100%;
+  }
+}
+
+label {
+  position: relative;
+  padding-bottom: 4px;
+  display: block;
+  color: var(--color-darkash);
+}
+
+label.file-label {
+
+  @include media-breakpoint-up(dt) {
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    align-items: center;
+  }
+}
+
+textarea,
+input,
+select{
+  max-width: 100%;
+  width: 100%;
+  background-color: var(--color-white);
+  color: var(--color-grayedblue);
+  border: 1px solid var(--color-lightblue);
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+
+  &:focus {
+    border: 1px solid var(--color-darkblue) !important;
+  }
+}
+
+input.btn {
+  border: none !important;
+}
+
+.wpcf7-checkbox.filled {
+  border: none !important;
+}
+
+input,
+select {
+  height: 50px;
+  padding: 12px;
+}
+
+.datepicker-wrp {
+  position: relative;
+
+  img {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+.wpcf7-file {
+  padding: 27px;
+}
+
+select {
+  position: relative;
+  color: var(--color-lightblue);
+  -webkit-appearance: none;
+  -o-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+
+  option {
+    color: var(--color-grayedblue);
+    cursor: pointer;
+  }
+}
+
+select.selected {
+  color: var(--color-grayedblue);
+}
+
+.arrow {
+  position: relative;
+  z-index: 9;
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    margin: auto 0 auto auto;
+    height: 20px;
+    width: 20px;
+    background-image: url(assets/images/dropdown-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    z-index: 0;
+    pointer-events: none;
+  }
+}
+
+textarea {
+  padding: 12px;
+  height: 120px;
+  resize: none;
+}
+
+/* Changing placeholder color */
+::-webkit-input-placeholder { /* Edge */
+  color: var(--color-blue100);
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--color-blue100);
+}
+::placeholder {
+  color: var(--color-blue100);
+}
+
+.wpcf7-file {
+  min-width: 148px;
+  width: auto;
+  height: 27px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+}
+
+.max-file-size {
+  display: block;
+  padding: 8px auto 32px;
+  text-align: left;
+  color: var(--color-dark1);
+  font-size: var(--txt-sm-font-size);
+  line-height: var(--txt-sm-line-height);
+  vertical-align: middle;
+  text-align: left;
+
+  @include media-breakpoint-up(dt) {
+    display: inline-block;
+    padding-left: 12px;
+  }
+}
+
+.wpcf7-checkbox {
+  position: relative;
+
+  label {
+    padding-left: 22px;
+  }
+
+  input {
+    height: 20px;
+    width: 20px;
+    border-radius: 0;
+    display: inline-block;
+  }
+}
+
+.upload-btn {
+  display: table;
+  padding: 12px 16px;
+  margin: 0 auto;
+  min-width: 136px;
+  text-align: center;
+  border: 1px dashed rgba($imperial-blue, .1);
+  border-radius: 4px;
+
+  .upload-image {
+    height: 16px;
+    width: 18px;
+    margin-right: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url('assets/images/upload.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+
+  .upload-text {
+    margin-left: 0;
+    vertical-align: middle;
+    text-align: center;
+    color: var(--color-darkash);
+    font-size: var(--font-sm-font-size);
+  }
+}
+
+.wpcf7-response-output {
+  position: relative;
+  border: none !important;
+  color: var(--color-smoothred);
+  padding: 10px 0;
+}
+
+/* File upload button styles */ 
+input[type="file"] {
+  position: absolute;
+	margin: 0;
+	padding: 0;
+	height: 72px;
+	line-height: 28px;
+  left: 0;
+  color: transparent;
+  border: none;
+	z-index: 1;
+  opacity: 1;
+  
+  @include media-breakpoint-up(dt) {
+    height: 57px;
+  }
+}
+
+.file {
+  padding: 0;
+}
+
+/* The container */
+.privacy{
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  border-bottom: 1px solid var(--color-lightblue);
+  margin-bottom: 36px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.privacy input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 5px;
+  left: -20px;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 2px solid var(--color-lilac);
+}
+
+/* On mouse-over, add a grey background color */
+.privacy label:hover input ~ .checkmark {
+  background-color: transparent;
+}
+
+/* When the checkbox is checked, add a blue background */
+.privacy input:checked ~ .checkmark {
+  background-color: transparent;
+  border: 2px solid var(--color-torch-red);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.privacy input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.privacy .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--color-torch-red);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.wpcf7 form .wpcf7-response-output {
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--color-imperial-blue);
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, 
+.wpcf7 form.unaccepted .wpcf7-response-output {
+  border-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  border-color: transparent;
+  color: #46b450;
+}
+
+.wpcf7 form.invalid {
+
+  .wpcf7-response-output{
+    display: none !important;
+  }
+}
+
+.wpcf7-not-valid{
+  border-color: var(--color-torch-red);
+}
+
+.invalid select {
+  border: 1px solid red;
+}
+
+.filled {
+
+  &:focus {
+    border: 1px solid var(--color-darkblue);
+  }
+}
+
+.invalid {
+
+  .filled {
+    border: 1px solid var(--color-lightblue);
+  }
+}
+
+.invalid {
+
+  .c_box.filled {
+    border: none;
+  }
+}
+
+
+.wpcf7-list-item-label {
+  font-family: var(--font-family-latobold);
+  font-size: var(--txt-sm-bold-font-size);
+  font-weight: var(--txt-sm-bold-font-weight);
+  line-height: var(--txt-sm-bold-line-height);
+  letter-spacing: var(--txt-sm-bold-letter-spacing);
+  color: var(--color-darkash);
+}
+
+.wpcf7-not-valid-tip {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--txt-sm-font-size);
+  font-weight: var(--txt-font-weight);
+  line-height: var(--txt-line-height);
+  letter-spacing: var(--txt-letter-spacing);
+  color: var(--color-torch-red);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-inner-spin-button{
+  display: none;
+}
+
+/* Form specific styles */ 
+.vetera-career-details-form{
+
+  &__form {
+
+    .file {
+
+      .wpcf7-form-control-wrap {
+        position: relative;
+  
+        input[type="file"] {
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          bottom: 0;
+          height: 100px;
+          width: 100%;
+          z-index: -2;
+
+          &:focus {
+            border: none !important;
+          }
+
+          @include media-breakpoint-up(dt) {
+            left: 0;
+            top: 36px;
+            bottom: auto;
+            right: auto;
+            margin: 0;
+            height: auto;
+            width: auto;
+          }
+        }
+
+        .max-file-size-label {
+          position: relative;
+          padding-bottom: 8px;
+          display: inline-block;
+          color: var(--color-darkash);
+          font-family: var(--font-family-latoregular);
+          font-size: var(--font-size);
+          font-weight: var(--font-weight);
+          line-height: var(--line-height);
+          letter-spacing: var(--letter-spacing);
+        }
+      }
+      .fill {
+
+        input[type="file"] {
+          top: auto;
+          height: 57px;
+
+          @include media-breakpoint-up(dt) {
+            top: 36px;
+            padding-left: 12px;
+          }
+        }
+      }
+    }
+
+    .fill {
+      .upload-text {
+        margin-left: 10px;
+    
+        @include media-breakpoint-up(dt) {
+          margin-left: 24px;
+        }
+      }
+  
+      input[type="file"] {
+        //top: 0 !important;
+        left: 12px;
+      }
+
+      .file-label {
+        text-align: left;
+      }
+    }
+
+    .max-file-size-label {
+      display: inline-block !important; 
+      position: relative;
+      padding-bottom: 4px;
+      color: var(--color-darkash);
+      font-family: var(--font-family-latoregular);
+      font-size: var(--font-size);
+      font-weight: var(--font-weight);
+      line-height: var(--line-height);
+      letter-spacing: var(--letter-spacing);
+    }
+
+    .max-file-size-label {
+      display: inline-block !important;
+    }
+  }
+}
+
+.vetera-contact-us-form {
+
+  &__form {
+
+    .file {
+      padding-bottom: 56px;
+
+      @include media-breakpoint-up(dt) {
+        padding-bottom: 24px;
+      }
+
+      .wpcf7-form-control-wrap {
+        position: relative;
+  
+        input[type="file"] {
+          position: relative;
+          top: 18px;
+          left: 0;
+          width: 100%;
+          text-align: left;
+
+          @include media-breakpoint-up(dt) {
+            left: 12px;
+          }
+        }
+  
+        label {
+          position: absolute;
+          top: 18px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+
+          @include media-breakpoint-up(dt) {
+            top: 0;
+            right: auto;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Seminare form styles */
+.vetera-seminare-page-grid {
+
+  &__form {
+
+    .seminare-form-title-wrapper {
+
+      @include media-breakpoint-down(dt) {
+        width: 100%;
+        position: relative;
+      }
+
+      .seminare-form-title {
+
+        @include media-breakpoint-down(dt) {
+          width: 75%;
+        }
+      }
+
+      span {
+
+        @include media-breakpoint-down(dt) {
+          position: absolute;
+          content: "";
+          display: block;
+          top: 50%;
+          bottom: 50%;
+          right: 0;
+          height: 20px;
+          width: 20px;
+          transform: translateY(-50%);
+          background-image: url(assets/images/seminare-form-close.png);
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+        }
+      }
+    }
+
+    .field {
+
+      @include media-breakpoint-up(dt) {
+        width: 247px;
+      }
+    }
+
+    .field.Klinik,
+    .field.webinar,
+    .field.position {
+      
+      @include media-breakpoint-up(dt) {
+        width: 100%;
+      }
+    }
+
+    .field.lastname,
+    .field.email {
+      
+      @include media-breakpoint-up(dt) {
+        margin-left: 24px;
+      }
+    }
+
+    .field.submit,
+    .field.privacy {
+      
+      @include media-breakpoint-up(dt) {
+       padding-bottom: 0;
+       border-bottom: none;
+       height: 40px;
+       width: 100%;
+      }
+    }
+
+    .field.submit {
+
+    }
+  }
+}
+
+.file {
+  padding-bottom: 24px;
+
+  .wpcf7-form-control-wrap {
+    position: relative;
+  }
+
+  input[type="file"]::-webkit-file-upload-button {
+    height: 57px;
+    width: 147px;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  input[type="file"]::-ms-file-upload-button {
+    height: 57px;
+    width: 147px;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  input[type="file"]::file-selector-button {
+    height: 57px;
+    width: 147px;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  input.uploaded {
+    display: block;
+    color: var(--color-dark1);
+    font-size: var(--txt-sm-font-size);
+    line-height: var(--txt-sm-line-height);
+    vertical-align: middle;
+    text-align: center;
+
+    @include media-breakpoint-up(dt) {
+      display: inline;
+    }
+  }
+
+  .fill {
+    .upload-text {
+      margin-left: 10px;
+  
+      @include media-breakpoint-up(dt) {
+        margin-left: 24px;
+      }
+    }
+
+    input[type="file"] {
+      top: 18px;
+    }
+  }
+}
+
+label.file-label {
+  text-align: center;
+
+  @include media-breakpoint-up(dt) {
+    text-align: left;
+  }
+
+  .max-file-size {
+    text-align: center;
+
+    @include media-breakpoint-up(dt) {
+      text-align: left;
+    }
+  }
+}
+
+.wpcf7-not-valid-tip.select {
+  display: none;
+}
+
+.invalid .wpcf7-not-valid-tip.select {
+  display: block;
+}

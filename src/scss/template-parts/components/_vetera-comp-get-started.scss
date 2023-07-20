@@ -1,0 +1,250 @@
+/* Get started component styles - mobile in default */
+.vetera-comp-get-started {
+    position: relative;
+    max-width: 1440px;
+    padding: 20px;
+    margin: 0 auto;
+
+    &--software-details {
+        margin-top: 80px !important;
+    }
+
+    /* Main elements - Desktop styles */
+    @include media-breakpoint-up(dt) {
+        .comp-title {
+            font-size: 48px;
+        }
+    }
+        form {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+
+            /* Main elements - Desktop styles */
+            @include media-breakpoint-up(tb) {
+                width: 334px;
+            }
+
+            /* Form override styles */
+            .btn {
+                position: absolute;
+                top: 5px;
+                right: 4px;
+                width: auto;
+                padding-right: 16px;
+                font-size: 14px;
+            }
+        }
+
+        .txt-sm {
+
+            /* Main elements - Desktop styles */
+            @include media-breakpoint-up(dt) {
+                width: 35%;
+                margin: 0 auto;
+            }
+        }
+
+    .wpcf7-validates-as-email {
+        // height: 46px;
+        // padding: 12px 4px 12px 36px;
+        // font-size: var(--txt-sm-bold-font-size);
+        // font-weight: var(--txt-sm-font-weight);
+        // color: var(--color-mirage);
+        border: 1px solid rgba(179, 187, 224, 0.15);
+        box-shadow: 0px 1px 5px rgba(17, 17, 17, 0.03);
+
+        @media (max-width: 374px) {
+            padding-left: 20px;
+            font-size: 10px;
+            font-weight: var(--txt-sm-font-weight);
+        }
+    }
+
+    ::-webkit-input-placeholder { /* Edge */
+    color: var(--color-blue100);
+    }
+    
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--color-blue100);
+    }
+    
+    ::placeholder {
+    color: var(--color-blue100);
+    }
+
+    input {
+        padding-right: 45%;
+        outline: none;
+
+        /* Input field - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            width: 100%;
+        }
+    }
+
+    /* Bubble styles */
+    &__bubbles {
+        position: relative;
+        min-height: 115px;
+
+        /* Bubbles - Desktop styles */
+        @include media-breakpoint-up(tb) {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Bubbles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            z-index: -1;
+        }
+
+        .bubble {
+            .bubble-img {
+                position: absolute;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+        }
+        .bubble1 {
+            .bubble-img {
+                height: 55px;
+                width: 55px;
+                border-radius: 55px;
+                top: 0;
+                left: 10%;
+
+                /* Bubble1 - Desktop styles */
+                @include media-breakpoint-up(tb) {
+                    height: 75px;
+                    width: 75px;
+                    border-radius: 75px;
+                }
+
+                /* Bubble1 - Desktop styles */
+                @include media-breakpoint-up(dt) {
+                    height: 122px;
+                    width: 122px;
+                    border-radius: 122px;
+                    top: auto;
+                    bottom: 21%;
+                    left: 15%;
+                }
+            }
+        }
+
+        .bubble2 {
+            .bubble-img {
+                height: 23px;
+                width: 23px;
+                border-radius: 23px;
+                top: 7px;
+                right: 23%;
+
+                /* Bubble2 - Desktop styles */
+                @include media-breakpoint-up(tb) {
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50px;
+                }
+
+                /* Bubble2 - Desktop styles */
+                @include media-breakpoint-up(dt) {
+                    height: 100px;
+                    width: 100px;
+                    border-radius: 100px;
+                    top: -28px;
+                    right: 19%;
+                }
+            }
+        }
+        .bubble3 {
+            .bubble-img {
+                height: 75px;
+                width: 75px;
+                border-radius: 75px;
+                top: 22px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+
+                /* Bubble3 - Desktop styles */
+                @include media-breakpoint-up(tb) {
+                    height: 90px;
+                    width: 90px;
+                    border-radius: 90px;
+                }
+
+                /* Bubble3 - Desktop styles */
+                @include media-breakpoint-up(dt) {
+                    height: 145px;
+                    width: 145px;
+                    border-radius: 145px;
+                    top: auto;
+                    left: auto;
+                    right: 12%;
+                    bottom: 32%;
+                }
+            }
+        }
+        .bubble4 {
+            .bubble-img {
+                height: 29px;
+                width: 29px;
+                border-radius: 29px;
+                top: 85px;
+                left: 14%;
+
+                /* Bubble4 - Desktop styles */
+                @include media-breakpoint-up(tb) {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 40px;
+                }
+
+                /* Bubble4 - Desktop styles */
+                @include media-breakpoint-up(dt) {
+                    height: 75px;
+                    width: 75px;
+                    border-radius: 75px;
+                    top: 92px;
+                    left: 26%;
+                }
+            }
+        }
+        .bubble5 {
+            .bubble-img {
+                height: 41px;
+                width: 41px;
+                border-radius: 41px;
+                top: 78px;
+                right: 12%;
+
+                /* Bubble5 - Desktop styles */
+                @include media-breakpoint-up(tb) {
+                    height: 55px;
+                    width: 55px;
+                    border-radius: 55px;
+                }
+
+                /* Bubble5 - Desktop styles */
+                @include media-breakpoint-up(dt) {
+                    height: 75px;
+                    width: 75px;
+                    border-radius: 60px;
+                    top: -14px;
+                    right: auto;
+                    left: 20%;
+                }
+            }
+        }
+    }
+}

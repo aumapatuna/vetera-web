@@ -1,0 +1,122 @@
+/* Contact details section styles - mobile in default */
+.vetera-contact-us-contact-details {
+    position: relative;
+    background-color: var(--color-imperial-blue);
+
+    /* Grid styles */
+    &__grid {
+        position: relative;
+
+        /* Grig styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+            column-gap: 20px;
+        }
+    }
+
+    /* Description styles */
+    &__description-blk {
+        position: relative;
+
+        /* Text styles */
+        .red-caps-5, h2, p, a {
+            text-align: center;
+
+            /* Text styles - Desktop styles */
+            @include media-breakpoint-up(dt) {
+                text-align: left;
+            }
+        }
+
+        /* SMO styles */
+        &__smo {
+            text-align: center;
+
+            /* SMO styles - Desktop styles */
+            @include media-breakpoint-up(dt) {
+                text-align: left;
+            }
+        }
+    }
+
+    /* Gradient styles */
+    &__gradient {
+        position: relative;
+        top: 0;
+        right: 0;
+        height: 465px;
+        width: auto;
+        display: block;
+        content: "";
+        background-image: url(assets/images/careers/vetera_map_mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        z-index: 0;
+
+        /* Gradient styles - Desktop styles */
+        @include media-breakpoint-up(tb) {
+            min-height: 1030px;
+        }
+
+        /* Gradient styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            position: absolute;
+            width: 65%;
+            height: 100%;
+            min-height: auto;
+            background-image: url(assets/images/careers/vetera_map_web.svg);
+            background-position: center center;
+        }
+    }
+
+    /* Map styles */
+    &__map-blk {
+        position: relative;
+        width: 100%;
+        display: block;
+        text-align: center;
+        line-height: 0;
+
+        /* Map block styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            text-align: right;
+        }
+
+        iframe {
+            width: 295px;
+            height: 222px;
+            margin: 0 auto;
+
+            /* Map styles - Desktop styles */
+            @include media-breakpoint-up(dt) {
+                width: 422px;
+                height: 317px;
+            }
+        }
+    }
+
+
+    /* Override font styles */
+    .vetera-component-contact-support__email,
+    .vetera-component-contact-support__phone {
+        a {
+            font-family: var(--font-family-latoregular);
+            font-size: var(--txt-md-font-size);
+            font-weight: var(--font-weight);
+            opacity: 1;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+
+    /* Social media block styles */
+    .vetera-footer__info-socials {
+        display: inline-block;
+    }
+
+}

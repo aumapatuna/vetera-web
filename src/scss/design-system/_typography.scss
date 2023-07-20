@@ -1,0 +1,380 @@
+/* 
+ * Typography
+ */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Change font styles in mobile */
+  @include media-breakpoint-down(mb) {
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}
+
+
+
+html,
+body,
+p,
+.paragraph {
+  color: var(--color-grayedblue);
+  font-family: var(--font-family-latoregular);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  word-break: break-word;
+}
+
+a:active,
+a:hover,
+a:focus,
+li:active,
+li:hover,
+li:focus {
+  outline: none;
+}
+
+textarea,
+input,
+select {
+  color: var(--color-grayedblue);
+}
+
+select {
+  color: var(--color-lightblue);
+}
+
+h1,
+.h1,
+.heading-1 {
+  font-family: var(--font-family-latobold);
+  font-size: var(--heading-1-font-size);
+  font-weight: var(--heading-1-font-weight);
+  line-height: var(--heading-1-line-height);
+  letter-spacing: var(--heading-1-letter-spacing);
+  color: var(--color-imperial-blue);
+
+  /* Change font styles in mobile */
+  @include media-breakpoint-down(mb) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+h2 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-2-font-size);
+  font-weight: var(--heading-2-font-weight);
+  line-height: var(--heading-2-line-height);
+  letter-spacing: var(--heading-2-letter-spacing);
+  color: var(--color-lilac);
+
+  /* Change font styles in mobile */
+  @include media-breakpoint-down(mb) {
+    font-family: var(--font-family-latoregular);
+    font-size: var(--heading-3-font-size);
+    font-weight: var(--heading-3-font-weight);
+    line-height: var(--heading-3-line-height);
+    letter-spacing: var(--heading-3-letter-spacing);
+  }
+}
+
+.h2 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-2-font-size);
+  font-weight: var(--heading-2-font-weight);
+  line-height: var(--heading-2-line-height);
+  letter-spacing: var(--heading-2-letter-spacing);
+  color: var(--color-darkash);
+
+  /* Change font styles in mobile */
+  @include media-breakpoint-down(mb) {
+    font-family: var(--font-family-latoregular);
+    font-size: var(--heading-3-font-size);
+    font-weight: var(--heading-3-font-weight);
+    line-height: var(--heading-3-line-height);
+    letter-spacing: var(--heading-3-letter-spacing);
+  }
+}
+
+.heading-2 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-2-font-size);
+  font-weight: var(--heading-2-font-weight);
+  line-height: var(--heading-2-line-height);
+  letter-spacing: var(--heading-2-letter-spacing);
+  color: var(--color-imperial-blue);
+}
+
+.heading-white-2 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-2-font-size);
+  font-weight: var(--heading-2-font-weight);
+  line-height: var(--heading-2-line-height);
+  letter-spacing: var(--heading-2-letter-spacing);
+  color: var(--color-white);
+}
+
+.comp-title {
+  font-family: var(--font-family-latobold);
+  font-size: var(--heading-2-font-size);
+  font-weight: var(--heading-1-font-weight);
+  line-height: var(--heading-1-line-height);
+  letter-spacing: var(--heading-1-letter-spacing);
+  color: var(--color-imperial-blue);
+}
+
+h3,
+.h3 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-3-font-size);
+  font-weight: var(--heading-3-font-weight);
+  line-height: var(--heading-3-line-height);
+  letter-spacing: var(--heading-3-letter-spacing);
+  color: var(--color-lilac);
+}
+
+.h3 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-3-font-size);
+  font-weight: var(--heading-3-font-weight);
+  line-height: var(--heading-3-line-height);
+  letter-spacing: var(--heading-3-letter-spacing);
+  color: var(--color-dark);
+}
+
+.heading-3 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-3-font-size);
+  font-weight: var(--heading-3-font-weight);
+  line-height: var(--heading-3-line-height);
+  letter-spacing: var(--heading-3-letter-spacing);
+  color: var(--color-torch-red);
+}
+
+.heading-white-3 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-3-font-size);
+  font-weight: var(--heading-3-font-weight);
+  line-height: var(--heading-3-line-height);
+  letter-spacing: var(--heading-3-letter-spacing);
+  color: var(--color-white);
+}
+
+.heading-blue-3 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-3-font-size);
+  font-weight: var(--heading-3-font-weight);
+  line-height: var(--heading-3-line-height);
+  letter-spacing: var(--heading-3-letter-spacing);
+  color: var(--color-imperial-blue);
+}
+
+h4 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-4-font-size);
+  font-weight: var(--heading-4-font-weight);
+  line-height: var(--heading-4-line-height);
+  letter-spacing: var(--heading-4-letter-spacing);
+  color: var(--color-shade);
+}
+
+.h4 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-4-font-size);
+  font-weight: var(--heading-4-font-weight);
+  line-height: var(--heading-4-line-height);
+  letter-spacing: var(--heading-4-letter-spacing);
+  color: var(--color-dark);
+}
+
+.heading-4 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-4-font-size);
+  font-weight: var(--heading-4-font-weight);
+  line-height: var(--heading-4-line-height);
+  letter-spacing: var(--heading-4-letter-spacing);
+  color: var(--color-darkash);
+}
+
+h5 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-5-font-size);
+  font-weight: var(--heading-5-font-weight);
+  line-height: var(--heading-5-line-height);
+  letter-spacing: var(--heading-5-letter-spacing);
+  color: var(--color-ash);
+}
+
+.heading-5 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-5-font-size);
+  font-weight: var(--heading-5-font-weight);
+  line-height: var(--heading-5-line-height);
+  letter-spacing: var(--heading-5-letter-spacing);
+  color: var(--color-lilac);
+}
+
+.heading-white-5 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-5-font-size);
+  font-weight: var(--heading-5-font-weight);
+  line-height: var(--heading-5-line-height);
+  letter-spacing: var(--heading-5-letter-spacing);
+  color: var(--color-white);
+}
+
+.heading-black-5 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-5-font-size);
+  font-weight: var(--heading-5-font-weight);
+  line-height: var(--heading-5-line-height);
+  letter-spacing: var(--heading-5-letter-spacing);
+  color: var(--color-dark);
+}
+
+.heading-darkash-5 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-5-font-size);
+  font-weight: var(--heading-5-font-weight);
+  line-height: var(--heading-5-line-height);
+  letter-spacing: var(--heading-5-letter-spacing);
+  color: var(--color-darkash);
+}
+
+.h5 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-5-font-size);
+  font-weight: var(--heading-5-font-weight);
+  line-height: var(--heading-5-line-height);
+  letter-spacing: var(--heading-5-letter-spacing);
+  color: var(--color-imperial-blue);
+}
+
+.caps-5 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-5-font-size);
+  font-weight: var(--heading-5-font-weight);
+  line-height: var(--heading-5-line-height);
+  letter-spacing: var(--heading-5-letter-spacing);
+  color: var(--color-imperial-blue);
+}
+
+.red-caps-5 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-5-font-size);
+  font-weight: var(--heading-5-font-weight);
+  line-height: var(--heading-5-line-height);
+  letter-spacing: var(--heading-5-letter-spacing);
+  color: var(--color-torch-red);
+}
+
+h6,
+.h6,
+.heading-6 {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--heading-6-font-size);
+  font-weight: var(--heading-6-font-weight);
+  line-height: var(--heading-6-line-height);
+  letter-spacing: var(--heading-6-letter-spacing);
+  color: var(--color-imperial-blue);
+}
+
+// Text related styles
+.txt-lg-bold {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--txt-lg-bold-font-size);
+  font-weight: var(--txt-lg-bold-font-weight);
+  line-height: var(--txt-lg-bold-line-height);
+  letter-spacing: var(--txt-lg-bold-letter-spacing);
+  color: var(--color-darkash);
+}
+
+.txt-lg {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--txt-lg-font-size);
+  font-weight: var(--txt-lg-font-weight);
+  line-height: var(--txt-lg-line-height);
+  letter-spacing: var(--txt-lg-letter-spacing);
+  color: var(--color-darkash);
+}
+
+.txt-md-bold {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--txt-md-bold-font-size);
+  font-weight: var(--txt-md-bold-font-weight);
+  line-height: var(--txt-md-bold-line-height);
+  letter-spacing: var(--txt-md-bold-letter-spacing);
+  color: var(--color-torch-red);
+}
+
+.txt-sm-bold {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--txt-sm-bold-font-size);
+  font-weight: var(--txt-sm-bold-font-weight);
+  line-height: var(--txt-sm-bold-line-height);
+  letter-spacing: var(--txt-sm-bold-letter-spacing);
+  color: var(--color-darkblack);
+}
+
+.txt-sm {
+  font-family: var(--font-family-latoregular);
+  font-size: var(--txt-sm-font-size);
+  font-weight: var(--txt-sm-font-weight);
+  line-height: var(--txt-sm-line-height);
+  letter-spacing: var(--txt-sm-letter-spacing);
+  color: var(--color-darkgray);
+}
+
+a, .link {
+  color: var(--color-torch-red);
+  font-family: var(--font-family-latoregular);
+  font-size: var(--txt-md-bold-font-size);
+  line-height: var(--txt-sm-line-height);
+  font-weight: var(--txt-sm-bold-font-weight);
+  opacity: 0.8;
+  text-decoration: none;
+  outline: none;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  /* Secondary link */ 
+  &--secondary {
+    position: relative;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    a {
+      font-family: var(--font-family-latoregular);
+      font-size: var(--txt-md-bold-font-size);
+      font-weight: var(--txt-md-bold-font-weight);
+      line-height: var(--txt-md-bold-line-height);
+      letter-spacing: var(--txt-md-bold-letter-spacing);
+      color: var(--color-torch-red);
+      opacity: 1; 
+      outline: none; 
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    /* Link icon */ 
+    &:after {
+      position: absolute;
+      top: 6px;
+      right: -30px;
+      width: 14px;
+      height: 9px;
+      content: '';
+      background-color: transparent;
+      background-image: url('assets/images/vector.svg');
+    }
+  }
+}

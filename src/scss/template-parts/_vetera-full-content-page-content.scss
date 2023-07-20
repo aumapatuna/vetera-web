@@ -1,0 +1,75 @@
+/* Full content page content styles */
+.vetera-full-content-page-content {
+
+  /* Full content page content max width */
+  &__body {
+    max-width: 680px;
+    margin: auto;
+
+    /* Overring default styles */
+    p,
+    h5,
+    li {
+      color: var(--color-darkash); 
+    }
+
+    h5 {
+      margin: 36px 0 12px;
+      font-weight: var(--txt-lg-bold-font-weight);
+    }
+
+    a[href^="tel:"] {
+      font-weight: var(--font-weight);
+      color: var(--color-darkash);
+      opacity: 1;
+    }
+
+    img {
+      height: auto;
+    }
+
+    ul {
+      padding-left: 10px;
+      padding-bottom: 16px;
+
+      li {
+        position: relative;
+        padding-left: 44px;
+        color: var(--color-darkash);
+
+        &:after {
+          position: absolute;
+          top: 6px;
+          left: 0;
+          width: 20px;
+          height: 20px;
+          content: '';
+          display: block;
+          background-color: transparent;
+          background-image: url("assets/images/check_circle.svg");
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+        }
+      }
+    }
+
+    figure {
+      margin: auto 0;
+    }
+
+  }
+
+  /* Apply button style */
+  .apply-btn {
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+
+    /* Apply button style - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      width: auto;
+      display: table;
+    }
+  }
+}

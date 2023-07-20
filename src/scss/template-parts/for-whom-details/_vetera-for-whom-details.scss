@@ -1,0 +1,247 @@
+/* For whom details page styles */
+.vetera-for-whom-details {
+  margin-bottom: 80px;
+
+  /* Grid block styles */
+  .vetera-comp-client-records {
+
+    /* Grid block symbol styles */
+    &__symbol {
+      img {
+        height: 30px;
+        width: 30px;
+        object-fit: cover;
+      }
+    }
+
+    /* Grid block image styles */
+    &__image {
+      img {
+        height: auto;
+        width: 90%;
+        float: none;
+        object-fit: cover;
+
+        /* Grid block image styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+          max-width: 531px;
+          max-height: 341px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /* For whom details page card styles */
+  .vetera-home-icon-cards {
+    &__list {
+      width: 83%;
+      margin: 0 auto;
+      row-gap: 24px;
+
+      @include media-breakpoint-up(dt) {
+        width: 95%;
+        row-gap: 68px;
+      }
+    }
+
+    .vetera-comp-you-grow {
+
+      /* Icon card image styles */
+      &__image {
+        img {
+          max-width: 104px;
+          height: 60px;
+          object-fit: cover;
+          text-align: center;
+        }
+      }
+
+      /* Icon card title styles */
+      .heading-5 {
+
+        /* Icon card title styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+          min-height: 56px;
+        }
+      }
+    }
+  }
+
+  /* Integration block styles */
+  .integrations-logo-card {
+    &__img {
+      img {
+        width: auto;
+        max-width: 125px;
+        max-height: 74px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  /* Integration card styles */
+  .vetera-comp-integration {
+    &__logo-blk {
+
+      @include media-breakpoint-down(tb) {
+        grid-template-rows: 120px;
+      }
+    }
+  }
+
+  /* Customer support styles */
+  .vetera-home-custom-support {
+    &__grid {
+      row-gap: 32px;
+    }
+  }
+
+  /* Testimonials block styles */
+  .vetera-for-whom-testimonials {
+    position: relative;
+    padding: 80px 16px;
+    background-color: var(--color-imperial-blue);
+
+    .container {
+      position: relative;
+    }
+
+    /* Testimonials card block styles */
+    &__card {
+      padding: 40px 32px 36px;
+      background-color: var(--color-white);
+      border-radius: 8px;
+
+      /* Testimonials card block styles - Desktop styles */
+      @include media-breakpoint-up(dt) {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 48px 58px;
+        display: grid;
+        grid-template-columns: 1fr 6fr;
+        grid-gap: 72px;
+        align-items: center;
+      }
+
+      &--one-col {
+
+        /* Testimonials card block styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+          grid-template-columns: 1fr;
+          grid-gap: 0;
+        }
+      }
+    }
+
+    /* Testimonials card description styles */
+    &__description {
+      text-align: center;
+
+      /* Testimonials card description styles - Desktop styles */
+      @include media-breakpoint-up(dt) {
+        text-align: left;
+      }
+    }
+
+    /* Testimonials card signature styles */
+    &__signature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 0;
+      align-items: center;
+
+      /* Testimonials card signature styles - Desktop styles */
+      @include media-breakpoint-up(dt) {
+        grid-template-columns: 1fr 6fr;
+        grid-gap: 24px;
+        align-items: self-end;
+      }
+
+      &--one-col {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0;
+      }
+    }
+
+    &__person {
+      text-align: left;
+    }
+
+    &__logo {
+      text-align: center;
+
+      img {
+        max-width: 73px;
+        max-height: 48px;
+        object-fit: cover;
+      }
+    }
+
+    &__image {
+      img {
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+      }
+    }
+
+    /* Testimonials block background styles */
+    &__bg {
+      display: none;
+      opacity: 0.3;
+
+      /* Testimonials block background styles - Desktop styles */
+      @include media-breakpoint-up(dt) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        height: 390px;
+      }
+
+      /* Testimonials block background image styles */
+      img {
+
+        /* Testimonials block background image styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+          width: 437px;
+          height: auto;
+          min-height: 390px;
+          object-fit: cover;
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+
+  /* Home icon cards styles */
+  .vetera-home-icon-cards { 
+    &__list {
+
+      /* Home icon cards styles - Desktop styles */
+      @include media-breakpoint-up(dt) {
+        column-gap: 65px;
+      }
+    }
+  }
+
+  /* Integration button styles */
+  .vetera-comp-integration {
+    &__button {
+      text-align: center;
+
+      /* Integration button styles - Desktop styles */
+      @include media-breakpoint-up(dt) {
+        text-align: left;
+      }
+    }
+  }
+
+  #accordion {
+    a {
+      font-size: var(--txt-sm-font-size);
+      font-weight: var(--txt-sm-font-weight);
+     }
+  }
+} 

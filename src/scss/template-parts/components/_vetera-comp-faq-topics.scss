@@ -1,0 +1,28 @@
+/* FAQ topics component styles - mobile in default */
+.vetera-comp-faq-topics {
+    padding: 20px 24px;
+    background-color: var(--color-thinblue);
+    border-radius: 4px;
+    display:none;
+    margin-bottom: 0 !important;
+
+    @include media-breakpoint-up(dt) {
+        display: block;
+        margin-bottom: 32px !important;
+      }
+
+    .cat-opacity {
+        opacity: 0.8;
+    }
+
+    .cat-opacity:hover {
+        opacity: 1;
+    }
+
+    .active {
+        font-weight: var(--txt-sm-bold-font-weight);
+        opacity: 1 !important;
+        cursor: default;
+        pointer-events: none;
+    }
+}

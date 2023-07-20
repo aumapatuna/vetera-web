@@ -1,0 +1,130 @@
+/* About Us page our story section styles - mobile in default */
+.vetera-about-us-our-story {
+    position: relative;
+
+    /* Grid styles - Desktop styles */
+    &__grid{
+
+         /* Grid styles - Desktop styles */
+         @include media-breakpoint-up(dt) {
+            display: grid;
+            grid-template-columns: 5fr 7fr;
+            column-gap: 70px;
+            text-align: left;
+        }
+
+    }
+
+    /* Grid styles */
+    &__description {
+        text-align: center;
+
+        /* Grid styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            text-align: left;
+        }
+    }
+
+    /* Timeline styles */
+    &__timeline {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: "";
+            top: -8px;
+            left: 16px;
+            height: 15px;
+            width: 2px;
+            background-image: url(assets/images/about-us/timeline-edge.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+
+        }
+    }
+
+    /* Timeline wrapper styles */
+    &__timeline-wrp {
+        position: relative;
+        padding-left: 40px;
+        max-height: 781px;
+        overflow-y: scroll;
+        cursor: all-scroll;
+
+        /* Timeline wrapper styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            max-height: 613px;
+        }
+
+        &::-webkit-scrollbar {
+            width: 0;  
+            display: none;
+        }
+
+        /* Timeline wrapper item styles */
+        &__item {
+            position: relative;
+
+            &:before {
+                position: absolute;
+                display: block;
+                content: "";
+                top: 7px;
+                left: -31px;
+                width: 16px;
+                height: 16px;
+                border: 1px solid var(--color-white);
+                border-radius: 17px;
+                background-color: var(--color-torch-red);
+                z-index: 1;
+            }
+
+            &:after {
+                position: absolute;
+                display: block;
+                content: "";
+                bottom: -8px;
+                left: -24px;
+                width: 2px;
+                height: 100%;
+                background-color: var(--color-torch-red);
+            }
+
+            /* Timeline wrapper font styles */
+            .red-bold {
+                color: var(--color-torch-red);
+                font-weight: var(--heading-5-font-weight);
+            }
+        }
+
+        /* Timeline wrapper last item styles */
+        .timeline-last {
+
+            &:after {
+                display: none;
+            }
+
+            .red-bold {
+                position: relative;
+
+                &:after {
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    top: 24px;
+                    left: -24px;
+                    height: 15px;
+                    width: 2px;
+                    background-image: url(assets/images/about-us/timeline-edge.svg);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: contain;
+                }
+            }
+    
+        }
+
+    }
+}

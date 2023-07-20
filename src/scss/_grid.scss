@@ -1,0 +1,8 @@
+/* 
+ * Container 
+ * A class to wrap the content to the given max-width for desktop
+ */
+.container {
+  @include make-container();
+  @include make-container-max-widths();
+}

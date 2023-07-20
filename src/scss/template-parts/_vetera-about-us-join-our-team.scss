@@ -1,0 +1,82 @@
+/* About Us page Join our team styles - mobile in default */
+.vetera-about-us-join-our-team {
+    position: relative;
+
+    /* Grig styles */
+    &__grid {
+        display: flex;
+        grid-template-columns: 1fr;
+        flex-direction: column-reverse;
+        column-gap: 0;
+
+        /* Grig styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            display: grid;
+            grid-template-columns: 4fr 3fr;
+            flex-direction: inherit;
+        }
+    }
+
+    /* Description block */
+    &__description-blk {
+        position: relative;
+        padding: 0 24px;
+        background-color: var(--color-imperial-blue);
+        text-align: center;
+        overflow: hidden;
+        z-index: 1;
+
+        /* Description block styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            padding: 0 90px;
+            text-align: left;
+        }
+
+        /* Color override */
+        h3 {
+            color: var(--color-torch-red);
+        }
+    }
+
+    /* Image block */
+    &__image-blk {
+        z-index: 1;
+
+        img {
+            height: auto;
+            width: 100%;
+            object-fit: cover;
+            vertical-align: bottom;
+
+            /* Image block styles - Desktop styles */
+            @include media-breakpoint-up(dt) {
+                height: 100%;
+                width: 443px;
+            }
+        }
+    }
+
+    /* Description block gradient styles */
+    &__gradient {
+        position: absolute;
+        top: -14px;
+        right: -94px;
+        width: 282px;
+        min-height: 196px;
+        display: block;
+        content: "";
+        background-image: url(assets/images/about-us/join-our-team-gradient.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        pointer-events: none;
+        z-index: 0;
+
+        /* Description block gradient styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            right: -152px;
+            width: 491px;
+            min-height: 340px;
+        }
+    }
+}

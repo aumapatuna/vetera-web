@@ -1,0 +1,32 @@
+/* Our team section styles - mobile in default */
+.vetera-about-us-our-value {
+
+  /* Block title styles */
+  &__title {
+
+    /* Block title styles - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      width: 510px;
+      margin: 0 auto;
+    }
+  }
+
+  /* Card block styles */
+  &__cards {
+    position: relative;
+
+    /* Card block overriding font styles */
+    h4 {
+      color: var(--color-dark);
+      font-weight: var(--heading-3-font-weight);
+      text-transform: none;
+    }
+
+    /* Card block styles - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 50px;
+    }
+  }
+}

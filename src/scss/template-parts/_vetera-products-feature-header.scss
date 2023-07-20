@@ -1,0 +1,14 @@
+/* Product feature styles - mobile in default */
+.vetera-products-feature-header {
+  position: relative;
+
+  /* Product feature title styles */
+  &__title-blk {
+
+    /* Product feature title styles - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      width: 683px;
+      margin: 0 auto;
+    }
+  }
+}

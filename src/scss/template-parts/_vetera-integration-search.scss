@@ -1,0 +1,84 @@
+/* Integration-search styles - mobile in default */
+.vetera-integration-search {
+    position: relative;
+
+    /* Integration search bar styles */
+    &__input {
+        position: relative;
+        width: 100%;
+
+        &__icon {
+            position: absolute;
+            display: block;
+            content: "";
+            top: 16px;
+            left: 16px;
+            height: 16px;
+            width: 16px;
+            background-image: url(assets/images/search.svg);
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: center center;
+            background-size: contain;
+
+            /* Integration search styles - Desktop */
+            @include media-breakpoint-up(dt) {
+                left: 16px;
+            }
+        }
+
+        &__bar {
+            text-indent: 36px;
+        }
+    }
+
+    /* Integration search styles */
+    &__title {
+        position: relative;
+        display: none;
+
+        /* Integration search styles - Desktop */
+        @include media-breakpoint-up(dt) {
+            display: block;
+            width: 70%;
+            border-bottom: 1px solid var(--color-lightblue);
+        }
+    }
+
+    /* Integration search categories styles */
+    &__categories {
+        position: relative;
+        display: none;
+
+        /* Integration search categories styles - Desktop */
+        @include media-breakpoint-up(dt) {
+            display: block;
+        }
+
+        .cat {
+            cursor: pointer;
+
+            a {
+                color: var(--color-grayedblue);
+
+                &:hover {
+                    color: var(--color-imperial-blue);
+                    border-bottom: 1px solid var(--color-imperial-blue);
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        .cat.active {
+
+            a {
+                display: inline;
+                color: var(--color-imperial-blue);
+                border-bottom: 1px solid var(--color-imperial-blue);
+                cursor: default;
+                pointer-events: none;
+                cursor: default;
+            }
+        }
+    }
+}

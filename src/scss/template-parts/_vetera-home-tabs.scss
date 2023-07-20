@@ -1,0 +1,111 @@
+/* Home tabs */ 
+.vetera-two-tab--home  {
+
+  .vetera-comp-home-tab {
+
+    &__image-blk-img {
+      display: none;
+
+      @include media-breakpoint-up(dt) {
+        display: block;
+      }
+    }
+  }
+
+  .only-mobile {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+
+    @include media-breakpoint-up(dt) {
+      display: none;
+    }
+  }
+
+  h2 {
+
+    @include media-breakpoint-up(dt) {
+      margin-top: 0 !important;
+    }
+  }
+
+  /* Main container */ 
+  > .container {
+    width: auto;
+  }
+
+  /* Tabs header */ 
+  .tabs {
+
+    &__headers {
+      padding: 0 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      @include media-breakpoint-down(tb) {
+        padding: 0;
+        display: none;
+      }
+
+      &__item {
+
+        @include media-breakpoint-up(dt) {
+          padding: 0 10px;
+        }
+
+        a {
+
+          @include media-breakpoint-up(dt) {
+            font-size: var(--txt-lg-bold-font-size);
+          }
+        }
+      }
+    }
+  }
+
+  .tab-content {
+
+    &:nth-child(even) {
+
+      .vetera-comp-home-tab{
+        &__grid {
+
+          @include media-breakpoint-up(dt) {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+    }
+  }
+
+  /* Separator */ 
+  hr {
+    display: none;
+
+    /* Override content container */ 
+    @include media-breakpoint-up(dt) {
+      background-color: var(--color-darkergray2);
+      opacity: 0.5;
+      border: 1px solid var(--color-darkergray2);
+      height: 1px;
+    }
+  }
+
+  /* Override content container */ 
+  @include media-breakpoint-up(dt) {
+    .tab-home-container {
+      width: auto;
+    }
+  }
+
+  /* Mobile only */ 
+  .mob-only {
+    display: block;
+
+    /* Mobile only - Desktop styles */ 
+    @include media-breakpoint-up(dt) {
+      display: none;
+    }
+  }
+}

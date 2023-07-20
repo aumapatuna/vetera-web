@@ -1,0 +1,69 @@
+/* Blog help component styles - mobile in default */
+.vetera-comp-paging {
+  position: relative;
+  clear: both;
+
+  ///* Grid styles - Desktop styles */
+  //@include media-breakpoint-up(dt) {
+  //  grid-template-columns: 1fr 1fr;
+  //}
+
+  button[disabled] {
+    color: #B3B4BE;
+    cursor: not-allowed;
+
+    &:hover {
+      box-shadow: none;
+      background: rgba(213, 213, 217, 0.2);
+    }
+
+    .arrows {
+      border-top: 2px solid #B3B4BE;
+      border-left: 2px solid #B3B4BE;
+    }
+  }
+
+  .btn-paging {
+    padding: 10px;
+    display: flex;
+    font-Weight: 900;
+    font-Size: 14px;
+    Line-height: 20px;
+    color: var(--color-darkash);
+    background: rgba(213, 213, 217, 0.2);
+    border: 0.5px solid #BBBBBF;
+
+    &:hover {
+      background: #fff;
+      box-shadow: 0 0 5px 2px #cac8c8;
+      z-index: 999;
+    }
+
+    .arrows {
+      display: block;
+      margin: 5px auto;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid var(--color-darkash);
+      border-left: 2px solid var(--color-darkash);
+    }
+
+    &.next {
+      border-radius: 0 4px 4px 0;
+
+      .arrow-right {
+        transform: rotate(135deg);
+        margin-left: 10px;
+      }
+    }
+
+    &.prev {
+      border-radius: 4px 0 0 4px;
+
+      .arrow-left {
+        transform: rotate(-45deg);
+        margin-right: 10px;
+      }
+    }
+  }
+}

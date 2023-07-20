@@ -1,0 +1,25 @@
+/* Leadership team component styles - mobile in default */
+.vetera-comp-leadership-team {
+    /* Person image styles */
+    &__image {
+        height: 120px;
+        width: 120px;
+        border-radius: 120px;
+
+        img {
+            height:100%;
+            width: auto;
+        }
+    }
+
+    /* Person image styles */
+    &__linkedin {
+        height: 16px;
+        width: 16px;
+
+        img {
+            height:100%;
+            width: auto;
+        }
+    }
+}

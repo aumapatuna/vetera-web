@@ -1,0 +1,114 @@
+/* FAQ details styles - mobile in default */
+.vetera-faq-details-block {
+
+  /* Grid styles */
+  &__grid {
+    position: relative;
+
+    /* Grig styles - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      display: grid;
+      grid-template-columns: 7fr 3fr;
+      column-gap: 108px;
+    }
+
+    /* Override text styles */
+    .heading-4 {
+      text-transform: none;
+    }
+
+    figure {
+      margin: 0;
+      
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    p,
+    li {
+      color: var(--color-darkash);
+    }
+
+    .vetera-comp-faqs-card {
+      
+      &__back-link {
+        position: relative;
+        padding-left: 22px;
+
+        &:before {
+          position: absolute;
+          display: block;
+          content: "";
+          top: 3px;
+          left: 0;
+          height: 10px;
+          width: 14px;
+          background-image: url("assets/images/back-arrow.svg");
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+        }
+      }
+    }
+
+    /* Hide mobile category dropdown initializer styles */
+    .faq-cat-in-mob {
+      display: none;
+    }
+  }
+
+  .vetera-faq-details {
+
+    &__view-all-mobile {
+
+      .mob-all-cat {
+
+        &:after {
+          top: 26px;
+          right: 0;
+        }
+      }
+
+      .all-cat-mob-rdrop-parent {
+
+        .all-cat-show-mob-rdrop {
+          display: block;
+        }
+
+        .all-cat-hide-mob-rdrop {
+          display: none;
+        }
+      }
+    }
+
+    &__view-all-mobile.opened {
+
+      .mob-all-cat {
+        
+        &:after {
+          top: 32px;
+        }
+      }
+
+      .all-cat-mob-rdrop-parent {
+
+        .all-cat-show-mob-rdrop {
+          display: none;
+        }
+
+        .all-cat-hide-mob-rdrop {
+          display: block;
+        }
+      }
+    }
+  }
+
+  /* Content seperator styles */
+  &__related-cards {
+    border-top: 1px solid var(--color-lightblue);
+  }
+
+}

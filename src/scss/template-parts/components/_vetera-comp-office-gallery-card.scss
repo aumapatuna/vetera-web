@@ -1,0 +1,141 @@
+/* Office gallery card */
+.vetera-comp-office-gallery-card {
+  position: relative;
+  background-color: var(--color-white);
+  border: 1px solid rgba(179, 187, 224, 0.37);
+  box-sizing: border-box;
+  box-shadow: 0 1px 18px rgba(17, 17, 17, 0.03);
+  border-radius: 4px;
+  z-index: 9;
+
+  /* Office gallery card border styles */
+  &:before,
+  &:after {
+    display: none;
+
+    /* Office gallery card border styles - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 16px;
+      left: -17px;
+      height: 100%;
+      width: 16px;
+      background: rgba($lightblue, .2);
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+  }
+
+  /* Office gallery card border styles */
+  &:after {
+
+    /* Office gallery card border styles - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      top: auto;
+      bottom: -16px;
+      left: auto;
+      right: 16px;
+      height: 16px;
+      width: calc(100% - 15px);
+      background: rgba($lightblue, .2);
+      border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
+
+  /* Top full width image */
+  &__image-full-width {
+    grid-area: full-width;
+    line-height: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  /* Bottom half width images */
+  &__image-half-width {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+
+    .image-container {
+      position: relative;
+      height: 80px;
+      line-height: 0;
+      overflow: hidden;
+
+      @include media-breakpoint-up(tb) {
+        height: 105px;
+      }
+
+      img {
+        width: 134px;
+        height: 80px;
+        object-fit: cover;
+
+        @include media-breakpoint-up(tb) {
+          height: 105px;
+          width: 170px;
+        }
+      }
+
+      /* View all button and overlay */
+      .view-all-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba($mirage, 0.8);
+        transform: translate(0, 0);
+        transition: all 1s ease-in-out;
+        cursor: pointer;
+
+        .link {
+          &--secondary {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        a {
+          transform: translate(-50%, -50%);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          font-family: var(--font-family-latoregular);
+          font-weight: var(--txt-sm-font-weight);
+          opacity: 1;
+          z-index: 0;
+          pointer-events: none;
+
+          &:after {
+            right: -20px;
+
+            @include media-breakpoint-up(tb) {
+              right: -30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__gallery-img {
+    height: 80px;
+    width: auto;
+    background-position: center center;
+    background-size: cover;
+
+    @include media-breakpoint-up(tb) {
+      height: 105px;
+    }
+
+  }
+
+}

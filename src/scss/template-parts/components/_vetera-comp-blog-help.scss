@@ -1,0 +1,49 @@
+/* Blog help component styles - mobile in default */
+.vetera-comp-blog-help {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 0;
+
+  /* Grid styles - Desktop styles */
+  @include media-breakpoint-up(dt) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0;
+    align-items: center;
+  }
+
+  .vetera-comp-blog-help {
+    &__body {
+      
+      /* Grid styles - Desktop styles */
+      @include media-breakpoint-up(dt) {
+        padding-right: 82px;
+      }
+
+      p {
+        font-size: var(--txt-sm-font-size);
+      }
+    }
+  }
+
+  form {
+    height: 36px;
+    position: relative;
+
+    input {
+      height: 36px;
+      box-sizing: border-box;
+    }
+
+    input.wpcf7-submit {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 93px;
+    }
+
+    .wpcf7-validates-as-email {
+      padding-right: 104px;
+    }
+  }
+
+}

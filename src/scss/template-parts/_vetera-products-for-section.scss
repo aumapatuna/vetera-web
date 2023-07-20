@@ -1,0 +1,65 @@
+/* Product for section for various pages styles */
+.veterta-products-for-section {
+    margin-bottom: 100px !important;
+
+    &__content {
+
+        @include media-breakpoint-up(dt) {
+            width: 683px;
+            margin: 0 auto;
+        }
+    }
+
+    @include media-breakpoint-up(dt) {
+        margin-bottom: 0 !important;
+    }
+
+    &--dark {
+        margin-bottom: 0 !important;
+    }
+
+    &--for-whom-features {
+        margin-top: 116px !important;
+
+        /* Product for section for various pages styles - Desktop */
+        @include media-breakpoint-up(dt) {
+            margin-top: 196px !important;
+        }
+    }
+
+    &--product-features {
+        margin-top: 0 !important;
+        margin-bottom: 80px !important;
+
+        @include media-breakpoint-up(dt) {
+            margin-top: 80px !important;
+        }
+
+        h2 {
+            display: none;
+        }
+
+        #block-1 {
+            margin-top: 0 !important;
+        }
+    }
+
+    &--for-whom {
+        margin-bottom: 100px !important;
+
+        .vetera-comp-client-records {
+            margin-top: 0 !important;
+
+            @include media-breakpoint-up(dt) {
+                margin-top: 100px !important;
+            }   
+        }
+    }
+
+    &--vetera-digital {
+       
+        @include media-breakpoint-up(dt) {
+            margin-bottom: 80px !important; 
+        }
+    }
+}

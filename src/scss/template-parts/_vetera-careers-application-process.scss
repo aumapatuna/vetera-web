@@ -1,0 +1,28 @@
+/* Careers application process styles - mobile in default */
+.vetera-careers-application-process {
+    position: relative;
+
+    /* Increase container width styles */
+    .container {
+
+        /* Increase container width styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            max-width: 1280px;
+        }
+    }
+
+    /* Career application wrap styles */
+    &__wrp {
+        position: relative;
+    }
+
+    /* Career application title styles */
+    &__title {
+
+        /* Career application title styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            width: 686px;
+            margin: 0 auto;
+        }
+    }
+}

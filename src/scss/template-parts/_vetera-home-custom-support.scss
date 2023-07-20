@@ -1,0 +1,41 @@
+/* Home custom support */ 
+.vetera-home-custom-support {
+
+  /* Grid */ 
+  &__grid {
+    display: grid;
+    row-gap: 50px;
+
+    @include media-breakpoint-up(dt) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 108px;
+    }
+  }
+
+  /* Content */ 
+  &__content {
+    text-align: center;
+
+    @include media-breakpoint-up(dt) {
+      text-align: left;
+    }
+  }
+
+  /* Accordion */ 
+  &__accordion {
+
+    /* Button */ 
+    &__btn {
+      text-align: center;
+
+      @include media-breakpoint-up(dt) {
+        text-align: left;
+      }
+    }
+
+    /* CH styles */ 
+    &__ch {
+      height: auto !important;
+    }
+  }
+}

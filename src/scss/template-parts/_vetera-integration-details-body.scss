@@ -1,0 +1,71 @@
+/* Integration details body styles - mobile in default */
+.vetera-integration-details-body {
+    position: relative;
+
+    /* Integration details container styles */
+    .container {
+
+        /* Integration details container styles - Desktop */
+        @include media-breakpoint-up(dt) {
+            width: 865px;
+            margin: 0 auto;
+          }
+    }
+
+    &__content {  
+        color: var(--color-darkash);
+
+        p {
+            color: var(--color-darkash); 
+        }
+
+        figure {
+            margin: 0;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        h4 {
+           color: var(--color-darkblack); 
+           margin-bottom: 12px;
+        }
+
+        ul {
+            padding-left: 10px;
+            padding-bottom: 16px;
+
+            li {
+                position: relative;
+                padding-left: 44px;
+                color: var(--color-darkash);
+
+                &:after {
+                    position: absolute;
+                    top: 6px;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    content: '';
+                    display: block;
+                    background-color: transparent;
+                    background-image: url("assets/images/check_circle.svg");
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+
+    /* Integration details container image styles */
+    &__image {
+
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,146 @@
+/*
+Theme Name: Vereta Web
+Theme URI: https://vetera.com
+Author: Amplifyn Team
+Author URI: https://amplifyn.com
+Description: Vereta Website theme
+Version: 1.0
+License URI: 
+Text Domain: vetera
+*/
+
+@import 'normalize';
+@import 'config';
+
+/* Functions */
+@import 'functions/map-deep-get';
+
+/* Mixin */
+@import 'mixins/breakpoints';
+@import 'mixins/spacer';
+@import 'mixins/grid';
+
+/* Helper classes */
+@import 'helpers/spacer';
+@import 'helpers/flex';
+@import 'helpers/display';
+@import 'helpers/text';
+
+/* Design system */
+@import 'design-system/typography';
+@import 'design-system/color-palette';
+@import 'design-system/button';
+@import 'design-system/form-control';
+@import 'design-system/listing';
+
+/* Base */
+@import 'base';
+
+/* Components */
+@import 'template-parts/components/vetera-comp-get-started';
+@import 'template-parts/components/vetera-comp-products';
+@import 'template-parts/components/vetra-comp-you-grow';
+@import 'template-parts/components/vetera-comp-testimonials';
+@import 'template-parts/components/vetera-comp-leadership-team';
+@import 'template-parts/components/vetera-comp-direct-communication';
+@import 'template-parts/components/vetera-comp-client-records';
+@import 'template-parts/components/vetera-comp-contact-support';
+@import 'template-parts/components/vetera-comp-faq-topics';
+@import 'template-parts/components/vetera-comp-jobs';
+@import 'template-parts/components/vetera-comp-stats-card';
+@import 'template-parts/components/vetera-comp-integrations-logo-card';
+@import 'template-parts/components/vetera-comp-product-detail-card';
+@import 'template-parts/components/vetera-comp-blog-main-card';
+@import 'template-parts/components/vetera-comp-blog-stats-card';
+@import 'template-parts/components/vetera-comp-office-gallery-card';
+@import 'template-parts/components/vetera-comp-for-whom-two-col';
+@import 'template-parts/components/vetera-comp-integration-stats-card';
+@import 'template-parts/components/vetera-comp-blog-help';
+@import 'template-parts/components/vetera-comp-home-tab';
+@import 'template-parts/components/_vetera-comp-pagination.scss';
+@import 'template-parts/components/_vetera-comp-about-author-card';
+@import 'template-parts/components/_vetera-comp-faqs-card';
+@import 'template-parts/components/_vetera-comp-our-value-card';
+@import 'template-parts/components/_vetera-press-media-card__banner';
+@import 'template-parts/components/_vetera-comp-downloads-card';
+
+/* Template parts */ 
+@import 'template-parts/_vetera-header';
+@import 'template-parts/_vetera-footer';
+@import 'template-parts/_vetera-single-image-header';
+@import 'template-parts/_vetera-product-detail-card';
+@import 'template-parts/_vetera-integration';
+@import 'template-parts/_vetera-testimonials';
+@import 'template-parts/_vetera-for-whom-single-image-header';
+@import 'template-parts/_vetera-for-whom-card';
+@import 'template-parts/_vetera-for-whom-two-col-grid';
+@import 'template-parts/_vetera-about-us-block-image-header';
+@import 'template-parts/_vetera-about-us-our-team';
+@import 'template-parts/_vetera-about-us-our-mission';
+@import 'template-parts/_vetera-about-us-our-values';
+@import 'template-parts/_vetera-about-us-leadership-team';
+@import 'template-parts/_vetera-about-us-join-our-team';
+@import 'template-parts/_vetera-about-us-our-story';
+@import 'template-parts/_vetera-about-us-learn-more';
+@import 'template-parts/_vetera-faq-listing';
+@import 'template-parts/_vetera-home-hero';
+@import 'template-parts/_vetera-home-clients';
+@import 'template-parts/_vetera-faq-detail-block';
+@import 'template-parts/_vetera-full-content-page-header';
+@import 'template-parts/_vetera-full-content-page-content';
+@import 'template-parts/_vetera-contact-us-contact-details';
+@import 'template-parts/_vetera-contact-us-form';
+@import 'template-parts/_vetera-two-tab';
+@import 'template-parts/_vetera-career-details-form';
+@import 'template-parts/_vetera-blog-list';
+@import 'template-parts/_vetera-blog-detail-content';
+@import 'template-parts/_vetera-blog-detail-related-posts';
+@import 'template-parts/vetera-full-content-page-header';
+@import 'template-parts/vetera-full-content-page-content';
+@import 'template-parts/vetera-contact-us-contact-details';
+@import 'template-parts/vetera-contact-us-form';
+@import 'template-parts/vetera-two-tab';
+@import 'template-parts/vetera-career-details-form';
+@import 'template-parts/vetera-careers-block-image-header';
+@import 'template-parts/vetera-careers-application-process';
+@import 'template-parts/_vetera-home-our-products';
+@import 'template-parts/vetera-careers-process-cards';
+@import 'template-parts/vetera-careers-our-jobs';
+@import 'template-parts/vetera-careers-our-offices';
+@import 'template-parts/_vetera-home-icon-cards';
+@import 'template-parts/_vetera-home-stats';
+@import 'template-parts/_vetera-home-custom-support';
+@import 'template-parts/_vetera-accordions';
+@import 'template-parts/_vetera-home-tabs';
+@import 'template-parts/vetera-integration-details-header';
+@import 'template-parts/vetera-integration-details-body';
+@import 'template-parts/vetera-integration-details-recommended';
+@import 'template-parts/vetera-integration-header';
+@import 'template-parts/vetera-integration-body';
+@import 'template-parts/vetera-integration-search';
+@import 'template-parts/vetera-integration-cards';
+@import 'template-parts/_vetera-home';
+@import 'template-parts/_vetera-blog-featured-item';
+@import 'template-parts/_vetera-header-nav';
+@import 'template-parts/_vetera-language-switcher';
+@import 'template-parts/vetera-products-for-section';
+@import 'template-parts/vetera-products-feature-header';
+@import 'template-parts/vetera-404-body';
+
+/* 2nd phase development */
+@import 'template-parts/for-whom-details/_vetera-for-whom-details';
+@import 'template-parts/vetera-press-media-listing';
+@import 'template-parts/vetera-press-media-downloads';
+@import 'template-parts/_vetera-press-media-contact-block';
+@import 'template-parts/partners/_vetera-partners'; 
+@import 'template-parts/request-demo/_vetera-request-demo-header';
+@import 'template-parts/request-demo/_vetera-request-demo-form';
+@import 'template-parts/_vetera-software-details-dark-grid';
+
+
+/* Seminare page development */
+@import 'template-parts/seminare/_vetera-seminare-page-header';
+@import 'template-parts/seminare/_vetera-seminare-page-grid';
+
+/* Cookie bar syles */
+@import 'template-parts/_cookiebar';

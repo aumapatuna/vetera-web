@@ -1,0 +1,92 @@
+/* Careers form styles - mobile in default */
+.vetera-career-details-form {
+
+    /* Require label styles */
+    .legend {
+        color: var(--color-darkash);
+
+        .require {
+            color: var(--color-torch-red);
+        }
+    }
+
+    /* Override Form styles */
+    &__form {
+        .require {
+            color: var(--color-torch-red);
+        }
+        .max-file-size-label,
+        .upload-btn {
+            display: inline-block;
+        }
+
+        .upload-btn {
+            width: 150px;
+        }
+
+        .wpcf7-form-control-wrap {
+            display: block;
+        }
+        .max-file-size-label {
+            color: var(--color-oxford-blue);
+            text-align: left;
+        }
+
+        /* Field styles */
+        .field {
+            width: 100%;    
+
+            /* Field styles - Desktop styles */
+            @include media-breakpoint-up(dt) {
+                width: 330px; 
+            }
+        }
+
+        /* Field submit styles */
+        .field.submit {
+            width: 86%;
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+
+            /* Field gaps styles - Desktop styles */
+            @include media-breakpoint-up(dt) {
+                width: 100%;
+                text-align: right;   
+            }
+
+            input {
+
+               /* Field gaps styles - Desktop styles */
+                @include media-breakpoint-up(dt) {
+                    width: 200px;
+                    text-align: center;
+                } 
+            }          
+        }
+
+        /* Field gaps styles - Desktop styles */
+        .field.firstname,
+        .field.email,
+        .field.salary {
+
+            /* Field gaps styles - Desktop styles */
+            @include media-breakpoint-up(dt) {
+                margin-right: 16px;
+            }
+        }
+
+        /* Full width styles */
+        .field.file,
+        .field.linkedin,
+        .field.message,
+        .field.privacy {
+
+            /* Full width styles - Desktop styles */
+            @include media-breakpoint-up(dt) {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}

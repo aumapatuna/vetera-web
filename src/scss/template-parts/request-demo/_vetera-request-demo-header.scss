@@ -1,0 +1,101 @@
+/* Request demo heder */
+.vetera-request-demo-header {
+
+    &__title-blk {
+
+        /* Title block styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            width: 681px;
+            margin: 0 auto;
+        }
+
+        /* Description block styles - Desktop styles */
+        .description {
+
+            /* Description block styles - Desktop styles */
+            @include media-breakpoint-up(dt) {
+                width: 510px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__video-blk { 
+        position: relative;
+        height: 192px;
+        width: 343px;
+        margin: 0 auto;
+        cursor: pointer;
+        transition: all ease 0.3s;
+
+        /* Title block styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            width: 864px;
+            height: 487px;
+            margin: 0 auto;
+        }
+
+        span.video-blk-btn {
+            position: absolute;
+            display: block;
+            content: "";
+            top: 50%;
+            left: 50%;
+            height: 33px;
+            width: 33px;
+            transform: translate(-50%, -50%);
+            background-image: url(assets/images/video-play.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            z-index: 9;
+        }
+
+        &__img {
+            position: absolute;
+            display: block;
+            content: "";
+            top: 0;
+            left: 0;
+            height: auto;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            object-fit: cover;
+            z-index: 1;
+        }
+    }
+
+    &__video-blk{
+
+        &__overlay {
+            position: absolute;
+            opacity: 0.5;
+            display: block;
+            content: "";
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+
+    &__video-blk.play {
+
+        &:before {
+            display: none;
+        }
+
+        &:after {
+            display:none;
+        }
+
+        img {
+            display: none;
+        }
+
+        video {
+            opacity: 1;
+        }
+    }
+}

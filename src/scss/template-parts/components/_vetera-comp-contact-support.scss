@@ -1,0 +1,26 @@
+/* Product component styles - mobile in default */
+.vetera-component-contact-support {
+  margin-top: 0 !important;
+  background-color: var(--color-imperial-blue);
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  @include media-breakpoint-up(dt) {
+    margin-top: auto !important;
+  }
+
+  /* Increasing button width */
+  .btn {
+    @include media-breakpoint-up(dt) {
+      width: 100%;
+    }
+  }
+
+  /* Seperater under button */
+  .hr {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-darkblue);
+  }
+}

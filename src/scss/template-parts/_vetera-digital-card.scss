@@ -1,0 +1,37 @@
+/* Vetera digital cards styles */
+.vetera-digital-card {
+
+    .vetera-for-whom-card{
+        margin-top: 60px !important;
+
+        &__grid {
+            position: relative;
+            display: grid;
+            margin: 0 auto 48px;
+            padding: 48px 0 0 !important;
+            grid-template-columns: 1fr;
+            column-gap: 16px;
+
+            /* Form styles - Desktop styles */
+            @include media-breakpoint-up(dt) {
+                grid-template-columns: 1fr 1fr 1fr;
+                height: auto;
+                width: auto;
+                margin: auto;
+            }
+
+        }
+
+        .vetera-comp-product-detail-card {
+            height: 245px;
+            width: 245px;
+            margin: 0 auto 48px;
+
+            &__icon {
+                align-self: flex-end;
+            }
+        }
+
+    }
+
+}

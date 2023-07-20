@@ -1,0 +1,75 @@
+/* Vetera feature two col grid */
+.vetera-for-whom-two-col-grid__img-blk {
+  position: relative;
+  width: 100%;
+
+  .vetera-for-whom-two-col-grid {
+    &__gray-bg {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      right: -36px;
+      background-color: var(--color-lightblue);
+      border-radius: 50px;
+      z-index: 1;
+      padding: 50px 50px;
+
+      img {
+        width: 100%;
+      }
+
+      @include media-breakpoint-up(dt) {
+        &__details {
+          grid-column-end: -1;
+        }
+      }
+
+    }
+
+    &__pink-bg {
+      position: absolute;
+      top: -46px;
+      width: 70%;
+      height: 70%;
+      background-color: var(--color-redlight);
+      border-radius: 50px;
+      right: -122px;
+    }
+  }
+
+  &.second-image {
+    .vetera-for-whom-two-col-grid {
+      &__gray-bg {
+        top: 75px;
+        right: 100px;
+        padding: 0 0 46px 45px;
+
+        img {
+          width: 100%;
+          margin: -20px 0 0 33px;
+        }
+      }
+
+      &__pink-bg {
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  &.third-image {
+    .vetera-for-whom-two-col-grid {
+      &__gray-bg {
+        top: 10%;
+        left: 40px;
+        right: -36px;
+        padding: 29px 35px 37px 35px;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+}

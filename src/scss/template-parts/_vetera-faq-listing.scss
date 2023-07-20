@@ -1,0 +1,191 @@
+/* FAQ listing styles - mobile in default */
+.vetera-faq-details {
+
+  /* Grid styles */
+
+  &__grid {
+    position: relative;
+
+    /* Grig styles - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      display: grid;
+      grid-template-columns: 7fr 3fr;
+      column-gap: 108px;
+    }
+  }
+
+  /* Search title styles */
+  &__view-all-mobile {
+
+    @include media-breakpoint-down(tb) {
+      position: relative;
+      display: block;
+    }
+
+    @include media-breakpoint-up(dt) {
+      display: none;
+    }
+
+    .mob-all-cat {
+        position: relative;
+        border-bottom: 1px solid transparent;
+
+        &:after {
+          position: absolute;
+          display: block;
+          content: "";
+          top: 14px;
+          right: 0;
+          height: 24px;
+          width: 24px;
+          background-image: url(assets/images/integration-details/mob-all.svg);
+          background-repeat: no-repeat;
+          background-size: auto;
+          background-position: center center;
+          background-size: contain;
+      }
+    }
+
+    .cat-all {
+      margin: 0;
+    }
+
+    .all-cat-mob-rdrop-parent {
+
+      .all-cat-show-mob-rdrop {
+        display: block;
+      }
+
+      .all-cat-hide-mob-rdrop {
+        display: none;
+      }
+    }
+  }
+
+  &__view-all-mobile.opened {
+    margin-bottom: 24px;
+    background-color: transparent;
+
+    .mob-all-cat {
+      position: relative;
+      border-bottom: 1px solid var(--color-lightblue);
+
+      &:after {
+        position: absolute;
+        display: block;
+        content: "";
+        top: 21px;
+        right: 0;
+        height: 12px;
+        width: 12px;
+        background-image: url(assets/images/integration-details/mob-close.svg);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center center;
+        background-size: contain;
+      }
+    }
+
+    .all-cat-mob-rdrop-parent {
+
+      .all-cat-show-mob-rdrop {
+        display: none;
+      }
+
+      .all-cat-hide-mob-rdrop {
+        display: block;
+      }
+    }
+  }
+
+  &__categories {
+    position: relative;
+    padding: 0 0 24px;
+
+    @include media-breakpoint-up(dt) {
+      display: none;
+    }
+
+    .cat.active {
+      display: inline;
+      color: var(--color-imperial-blue);
+      font-weight: var(--txt-sm-bold-font-weight);
+      border-bottom: 1px solid var(--color-imperial-blue);
+      cursor: default;
+
+      a {
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+  }
+
+  /* Search styles */
+  &__search {
+    position: relative;
+
+    h4 {
+      font-family: var(--font-family-latoregular);
+      text-transform: inherit;
+    }
+  }
+
+  /* Searchbox styles */
+  &__searchbox {
+    height: 52px;
+    width: 100%;
+    padding: 12px 20px;
+    outline: none;
+    border: 1px solid var(--color-lightblue);
+    border-radius: 4px;
+  }
+
+  /* Loading animation */
+  .loading-txt {
+    position: relative;
+    display: none;
+    margin: 100px auto;
+    height: 120px;
+    width: 120px;
+    background-image: url(assets/images/searching@2x.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    pointer-events: none;
+  }
+
+  .loading {
+
+    .vetera-faq-details {
+      &__list {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    /* FAQ listing custom font style */
+    .vetera-comp-faqs-card__body {
+      &-title {
+        font-weight: var(--txt-sm-bold-font-weight);
+      }
+      
+    }
+  }
+
+  /* FAQ listing comp card intro style */
+  .vetera-comp-faqs-card {
+
+    &__body {
+      .the-excerpt {
+        height: 80px;
+        overflow: hidden;
+
+        /* FAQ listing comp card intro style - Desktop styles */
+        @include media-breakpoint-up(dt) {
+          height: 40px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.vetera-comp-our-value-card {
+    margin-bottom: 48px;
+
+    @include media-breakpoint-up(dt) {
+        margin-bottom: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__icon {
+        img {
+            height: 80px;
+            width: 80px;
+            object-fit: cover;
+        }
+    }
+}

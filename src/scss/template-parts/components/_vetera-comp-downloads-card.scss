@@ -1,0 +1,26 @@
+.vetera-comp-downloads-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(179, 187, 224, 0.32);
+  box-sizing: border-box;
+/* drop shadow lvl 1 */
+  box-shadow: 0px 1px 5px rgba(17, 17, 17, 0.03);
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.vetera-comp-downloads-card__image img {
+  max-width: 100%;
+}
+
+.vetera-comp-downloads-card__image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+  min-height: 118px;
+}
+
+.vetera-comp-downloads-card__image img {
+  width: 100%;
+}

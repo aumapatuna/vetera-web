@@ -1,0 +1,49 @@
+/* Testimonials component styles - mobile in default */
+.vetera-comp-testimonials {
+    padding: 40px 32px 36px;
+    border-radius:8px;
+    background-color: var(--color-white);
+
+    /* Person image styles */
+    &__image {
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+        margin: 0 auto;
+        border-radius: 100px;
+
+        img {
+            height:100px;
+            width: 100px;
+            object-fit: cover;
+        }
+    }
+
+    &__logo-img {
+        height: 48px;
+        max-width: 111px;
+        width: auto;
+        object-fit: cover;
+    }
+
+    /* Person information grid */
+    &__info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 32px;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: "";
+            height: 2px;
+            width: 50px;
+            top: -20px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background-color: var(--color-torch-red);
+        }
+    }  
+}

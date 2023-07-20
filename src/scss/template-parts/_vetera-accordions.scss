@@ -1,0 +1,55 @@
+/* Accordion */
+.ui-accordion {
+
+  /* Accordion header */ 
+  .ui-accordion-header {
+    position: relative;
+    cursor: pointer;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 35px;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    /* Accordion icon */
+    .ui-accordion-header-icon {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-color: transparent;
+      background-image: url('assets/images/icons/accordion-plus.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+
+    &.ui-accordion-header-active {
+
+      .ui-accordion-header-icon {
+        background-image: url('assets/images/icons/accordion-minus.svg');
+      }
+
+    }
+  }
+
+  /* Accordion content */
+  .ui-accordion-content {
+    padding-bottom: 16px;
+
+    a {
+      font-size: var(--txt-sm-font-weight);
+    }
+  }
+}

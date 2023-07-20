@@ -1,0 +1,51 @@
+/* Product detail Card/Large Radius */
+.vetera-comp-product-detail-card {
+  width: 164px;
+  min-height: 164px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: wrap;
+  border: 1px solid rgba(179, 187, 224, 0.1);
+  box-sizing: border-box;
+  box-shadow: 0 1px 18px rgba(17, 17, 17, 0.03);
+  border-radius: 20px;
+
+  @include media-breakpoint-up(dt) {
+    width: 245px;
+    height: 245px;
+  }
+
+  /*Product detail Card icon */
+  &__icon {
+    align-self: flex-start;
+    margin: 0 auto;
+    min-height: 82px;
+  }
+
+  &__body {
+    width: 342px;
+    margin: 0 auto;
+    height: auto;
+    overflow: hidden;
+
+    @include media-breakpoint-up(dt) {
+      width: 100%;
+      height: auto;
+    }
+
+    p {
+      word-break: break-word;
+    }
+  }
+
+  img {
+    height: 50px;
+    max-width: 150px; 
+
+    @include media-breakpoint-up(dt) {
+      height: 75px;
+      max-width: 90px;
+      object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+/* Vetera Partners page styles */
+.vetera-partners {
+
+    /* Vetera Partners page styles - Desktop styles */
+    @include media-breakpoint-up(dt) {
+        margin-top: 168px !important;
+    }
+
+    /* Vetera Partners page header section styles */
+    .vetera-partners-header {
+
+        &__title-blk {
+
+            /* Vetera Partners page header section styles - Desktop styles */
+            @include media-breakpoint-up(dt) {
+                width: 683px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    /* Vetera Partners page contact section styles */
+    .vetera-partner-contact {
+
+        &__wrp {
+
+            /* Vetera Partners page contact section styles - Desktop styles */
+            @include media-breakpoint-up(dt) {
+                width: 686px;
+                margin: 0 auto;
+                padding: 0 44px;
+            }
+        }
+    }
+
+    /* Vetera Partners page stat card section styles */
+    .vetera-comp-integrations-stats {
+
+        &__grid {
+
+            /* Vetera Partners page stat card grid section styles - Desktop styles */
+            @include media-breakpoint-up(dt) {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 20px;
+            }
+        }
+
+        .vetera-comp-integrations-stats-card {
+
+            &__img-image {
+                height: 30px;
+                width: auto;
+                object-fit: cover;
+            }
+        }
+    }
+
+    /* Vetera Partners page contact block styles */
+    .vetera-partner-contact {
+        background-color: var(--color-lightblue);
+    }
+}

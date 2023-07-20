@@ -1,0 +1,113 @@
+/* Blog help component styles - mobile in default */
+.vetera-comp-home-tab {
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 0;
+
+    @include media-breakpoint-down(tb) {
+      padding-bottom: 60px;
+    }
+
+    /* Grid styles - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &.col-reverse {
+      flex-direction: row-reverse !important;
+
+      &__details {
+        /* Grid styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+          margin-left: 20px;
+        }
+      }
+
+      &__image-blk {
+        /* Grid styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+          width: 50%;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    img {
+      height: 64px;
+      width: 64px;
+      object-fit: cover;
+    }
+  }
+
+  &__body {
+    img {
+      height: 39px;
+      width: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__details {
+    /* Grid styles - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      width: 50%;
+    }
+
+  }
+
+  &__image-blk {
+    /* Grid styles - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      width: 50%;
+      margin-left: 20px;
+    }
+
+    &__practice-list {
+      /* Grid styles - Desktop styles */
+      @include media-breakpoint-up(dt) {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 20px;
+      }
+
+      .vetera-unordered-list {
+        
+        /* Grid styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+          column-count: 2;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      object-fit: contain;
+
+      /* image styles - Desktop styles */
+      @include media-breakpoint-up(dt) {
+        width: 80%;
+      }
+    }
+  }
+
+  .vetera-unordered-list li {
+
+    @include media-breakpoint-down(tb) {
+      line-height: 20px;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+  }
+
+  .vetera-unordered-list li:after {
+
+    @include media-breakpoint-down(tb) {
+      top: 0;
+    }
+  }
+}

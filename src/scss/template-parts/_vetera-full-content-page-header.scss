@@ -1,0 +1,41 @@
+/* Full content page header styles */
+.vetera-full-content-page-header {
+  position: relative;
+  background-color: rgba($lightblue, .35);
+  overflow: hidden;
+
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 88%;
+    background: rgba($imperial-blue, 0.05);
+    z-index: -1;
+  }
+
+  &__body {
+    &-bg {
+      position: absolute;
+      top: 80px;
+      right: 0;
+      bottom: 0;
+      width: 280px;
+      display: block;
+      height: 188px;
+      content: "";
+      background-image: url(assets/images/product-details/product-details-single-image-gradient.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      z-index: -1;
+
+      /* Background color gradient - Desktop styles */
+      @include media-breakpoint-up(dt) {
+        position: absolute;
+        width: 465px;
+        height: 241px;
+      }
+    }
+  }
+}

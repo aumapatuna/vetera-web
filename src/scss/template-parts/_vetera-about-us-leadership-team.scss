@@ -1,0 +1,47 @@
+/* Our team section styles - mobile in default */
+.vetera-about-us-leadership-team {
+
+  /* Card block styles */
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap:32px;
+
+    /* Card block styles - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 20px;
+    }
+
+    .vetera-comp-leadership-team {
+      /* User Image center - Desktop styles */
+      &__image {
+        height: 120px;
+        width: 120px;
+        margin: 0 auto;
+      }
+
+      &__image-img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+      }
+
+      /* Linkedin Image center - Desktop styles */
+      &__linkedin {
+        margin: 0 auto;
+        line-height: 0;
+
+        a {
+          opacity: 1;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}

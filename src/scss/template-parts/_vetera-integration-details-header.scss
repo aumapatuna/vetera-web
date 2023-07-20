@@ -1,0 +1,27 @@
+/* Integration details header styles - mobile in default */
+.vetera-integration-details-header {
+    position: relative;
+
+    /* Integration details container styles */
+    .container {
+
+        /* Integration details container styles - Desktop */
+        @include media-breakpoint-up(dt) {
+            width: 683px;
+            margin: 0 auto;
+        }
+    }
+
+    &__wrp {
+        
+        &__img {
+
+            img {
+                height: auto;
+                width: auto;
+                max-height: 100px;
+                max-width: 200px;
+            }
+        }
+    }
+}

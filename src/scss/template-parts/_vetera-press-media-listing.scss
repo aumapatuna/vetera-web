@@ -1,0 +1,18 @@
+/* Press and media listing */ 
+.vetera-press-media-listing {
+  padding-top: 170px;
+
+  /* Press listing */ 
+  &__press-listing {
+    display: grid;
+    max-width: 1037px;
+    row-gap: 80px;
+  }
+
+  /* Title */ 
+  &__title-blk {
+    max-width: 685px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

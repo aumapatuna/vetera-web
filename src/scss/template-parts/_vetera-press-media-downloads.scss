@@ -1,0 +1,35 @@
+/* Press and media download */ 
+.vetera-press-media-downloads {
+
+  /* Download cards */ 
+  &__download-cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+
+    @include media-breakpoint-up(dt) {
+      flex-direction: row;
+      max-width: 776px;
+      margin-left: auto;
+      margin-right: auto;
+      column-gap: 107px;
+      justify-content: center;
+    }
+  }
+
+  @include media-breakpoint-up(dt) {
+    /* Content */ 
+    &__content {
+      max-width: 686px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  /* Download card */ 
+  @include media-breakpoint-up(dt) {
+    .vetera-comp-downloads-card {
+      max-width: 334px;
+    }
+  }
+}

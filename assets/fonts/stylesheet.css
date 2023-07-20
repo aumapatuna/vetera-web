@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'latoregular';
+    src: url('./lato/lato-regular-webfont.eot');
+    src: url('./lato/lato-regular-webfont.woff2') format('woff2'),
+         url('./lato/lato-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'latoblack';
+    src: url('./lato/lato-black-webfont.eot');
+    src: url('./lato/lato-black-webfont.woff2') format('woff2'),
+         url('./lato/lato-black-webfont.woff') format('woff');   
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}

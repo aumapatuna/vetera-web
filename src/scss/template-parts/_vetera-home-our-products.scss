@@ -1,0 +1,60 @@
+/* Home our product */
+.vetera-home-our-product {
+  position: relative;
+  overflow-x: hidden;
+
+  &:after {
+    position: absolute;
+    top: 43%;
+    left: 0;
+    height: 57%;
+    width: 100%;
+    display: block;
+    content: "";
+    background: #F0FCFF;
+    z-index: -2;
+  }
+
+  &__main-grid {
+
+    @include media-breakpoint-up(tb) {
+      display: grid;
+      max-width: 686px;
+      margin: 0 auto;
+      //grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
+      column-gap: 19px;
+    }
+  }
+
+  /* Product image styles */
+  .vetera-component-products {
+    &__logo {
+      height: 26px;
+      max-width: 170px;
+      margin: 0 auto; 
+      text-align: center;
+
+      /* Product image styles - Desktop */
+      @include media-breakpoint-up(dt) {
+        height: 30px;
+        max-width: 272px;
+        width: 100%;
+      }
+
+      /* Product image styles */
+      img {
+        height: 26px;
+        max-width: 170px;
+        object-fit: cover;
+
+        /* Product image styles - Desktop */
+        @include media-breakpoint-up(dt) {
+          height: 30px;
+          max-width: 272px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

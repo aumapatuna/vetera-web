@@ -1,0 +1,196 @@
+/* Vetera Seminare page grid styles */
+.vetera-seminare-page-grid {
+
+    /* Vetera Seminare page container styles */
+    .container {
+        
+        /* Vetera Seminare page container styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            max-width: 1040px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    /* Vetera Seminare page apply section styles */
+    &__column {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+
+        /* Vetera Seminare page apply section styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            grid-template-columns: 5fr 7fr;
+        }
+    }
+
+    /* Vetera Seminare page apply section form styles */
+    &__form {
+
+        /* Vetera Seminare page apply section form styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            padding: 40px;
+            border: 1px solid;
+            border-color: var(--color-lightblue);
+            box-sizing: border-box;
+            box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.03);
+            border-radius: 8px;
+        }
+    }
+
+    /* Vetera Seminare page news section styles */
+    &__news {
+
+        /* Vetera Seminare page news section styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            padding-right: 40px;
+        }
+    }
+
+    /* Vetera Seminare page post styles */
+    &__post {
+        border-bottom: 1px solid;
+        border-color: var(--color-darkergray2);
+
+        /* Vetera Seminare page post content styles */
+        .row-content {
+            display: none;
+        }
+    }
+
+    /* Vetera Seminare page post styles */
+    &__post.active {
+
+        /* Vetera Seminare page post content styles */
+        .row-content {
+            display: block;
+        }
+
+        /* Vetera Seminare page post title styles */
+        .row-title:after {
+            transform: rotate(180deg);
+        }
+    }
+
+    /* Vetera Seminare page post styles */
+    &__post.open:first-child {
+
+        /* Vetera Seminare page post content styles */
+        .row-content {
+            display: block;
+        }
+    }
+
+    /* Vetera Seminare page post title styles */
+    &__acc-title {
+        position: relative;
+        cursor: pointer;
+
+        /* Vetera Seminare page list happening styles */
+        .list-happening {
+            position: relative;
+            padding-left: 25px;
+        }
+
+        /* Vetera Seminare page list happening styles */
+        .list-happening:before {
+            position: absolute;
+            display: block;
+            content: "";
+            left: 0;
+            top: 50%;
+            bottom: 50%;
+            height: 15px;
+            width: 15px;
+            transform: translateY(-50%);
+            background-image: url('assets/images/post-acc-calander.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+    }
+
+    /* Vetera Seminare page post title styles */
+    &__acc-title:after {
+        position: absolute;       
+        display: block;
+        height: 6px;
+        width: 10px;
+        content: "";
+        top: 50%;
+        right: 5px;
+        background-image: url('assets/images/post-acc-arrow.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    /* Vetera Seminare page moderator styles */
+    &__moderators {
+        //display: grid;
+        display: flex;
+        grid-template-columns: 1fr 7fr;
+        grid-gap: 16px;
+    }
+
+    /* Vetera Seminare page moderator image styles */
+    &__moderators-img {
+        height: 48px;
+        width: 48px;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 48px;
+        }
+    }
+    /* Vetera Seminare page post title styles */
+    &__acc-title.open:after {
+        transform: rotate(180deg);
+    }
+
+    /* Vetera Seminare page post paragraph styles */
+    &__post-content {
+        
+        /* Overriding default styles just for API request */ 
+        p {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    /* Vetera Seminare page button wrapper styles */
+    &__btn-wrapper {
+
+        @include media-breakpoint-down(dt) {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: 9999;
+            background-color: var(--color-white);
+            border-top: 1px solid;
+            border-color: var(--color-darkergray2);
+        }
+    }
+
+    /* Vetera Seminare page form section styles */
+    &__form {
+
+        @include media-breakpoint-down(dt) {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding-top: 32px;
+            padding-left: 16px;
+            padding-right: 16px;
+            background-color: var(--color-white);
+            overflow-y: scroll;
+            z-index: 99999;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+/* Feature two tab styles - mobile in default */
+.veterta-digital-two-col-grid {
+
+    /* Records block overriding styles */
+    .vetera-comp-client-records {
+        
+        &__image {
+            margin-bottom: 0 !important;
+
+            /* Records block overriding styles - Desktop styles */
+            @include media-breakpoint-up(dt) {
+                margin-bottom: 72px;
+            }
+        }
+    }
+}

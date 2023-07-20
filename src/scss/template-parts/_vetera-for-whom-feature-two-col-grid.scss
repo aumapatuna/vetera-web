@@ -1,0 +1,26 @@
+/* For whom feature page styles */
+.vetera-for-whom-feature-two-col-grid {
+
+    /* For whom feature page - Desktop styles */
+    @include media-breakpoint-up(dt) {
+        margin-top: 176px;
+    }
+
+    /* For whom feature page component styles */
+    .veterta-products-for-section {
+        margin-top: 116px !important;
+        margin-bottom: 100px;
+
+        /* For whom feature page component - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            margin-bottom: 0;
+        }
+    }
+
+    /* For whom feature page client records component styles */
+    .vetera-comp-client-records {
+        &__image {
+            margin-bottom: 0 !important;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+/* Card/Large Radius */
+.vetera-comp-integrations-stats-card {
+  border: 1px solid rgba(179, 187, 224, 0.32);
+  box-sizing: border-box;
+  box-shadow: 0 1px 5px rgba(17, 17, 17, 0.03);
+  border-radius: 8px;
+  display: none;
+  height: 272px;
+
+  .the-excerpt {
+    height: 82px;
+    overflow: hidden;
+  }
+
+  /* Card/Logo image */
+  &__img {
+    line-height: 0;
+    min-height: 30px;
+
+    img {
+      height: auto;
+      width: auto;
+      max-height: 30px;
+      max-width: 200px;
+    }
+  }
+
+  /* Card/body */
+  &__body {
+    margin-bottom: 10px!important;
+    &-title {
+      margin-bottom: 10px!important;
+    }
+  }
+}

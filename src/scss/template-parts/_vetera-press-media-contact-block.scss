@@ -1,0 +1,106 @@
+/* Press and media contact block */ 
+.vetera-press-media-contact-block {
+  padding-bottom: 72px;
+
+  /* Banner image */ 
+  &__banner {
+    width: 100%;
+    height: 403px;
+    position: relative;
+
+    @include media-breakpoint-up(dt) {
+      width: 333px;
+      height: 392px;
+    }
+
+    &__img {
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+    }
+  }
+
+  /* Main grid */ 
+  &__main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0;
+    overflow: hidden;
+
+    @include media-breakpoint-up(dt) {
+      grid-template-columns: 1fr 3fr;
+    }
+  }
+
+  /* content */ 
+  &__content {
+    background-color: var(--color-imperial-blue);
+    padding: 48px;
+    position: relative;
+    
+    /* background image */
+    &:before {
+      width: 100%;
+      height: 300px;
+      background-color: transparent;
+      background-image: url('assets/images/press/box-bg.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      position: absolute;
+      right: 0;
+      top: auto;
+      content: '';
+      z-index: 0;
+      bottom: 0;
+      opacity: 0.4;
+
+      @include media-breakpoint-up(dt) {
+        height: 393px;
+        width: 530px;
+        left: auto;
+        right: -211px;
+        background-position: top right;
+        background-size: contain;
+        bottom: 0;
+      }
+    }
+
+    /* Contact info list */ 
+    @include media-breakpoint-up(dt) {
+      &__contact-info-list {
+        display: inline-flex;
+      }
+    }
+
+    /* List item link */
+    &__contact-info-list-item-link {
+      display: inline-flex;
+      color: var(--color-white);
+      font-size: 14px;
+      font-weight: 600;
+
+      @include media-breakpoint-up(dt) {
+        align-items: center;
+        line-height: 0;
+      }
+    }
+
+    /* List item link icon */
+    &__contact-info-list-item-icon {
+      margin-right: 12px;
+    }
+
+    /* List item link item */
+    &__contact-info-list-item {
+      margin-bottom: 8px;
+
+      @include media-breakpoint-up(dt) {
+        margin-bottom: 0;
+        margin-right: 20px;
+      }
+    }
+  }
+}

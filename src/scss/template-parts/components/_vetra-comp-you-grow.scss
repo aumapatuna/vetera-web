@@ -1,0 +1,14 @@
+/* You grow component styles - mobile in default */
+.vetera-comp-you-grow {
+    /* Component image styles */
+    &__image {
+        width: auto;
+        height: 60px;
+
+        img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+    }
+}

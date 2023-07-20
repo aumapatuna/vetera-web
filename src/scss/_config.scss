@@ -1,0 +1,334 @@
+/* 
+ * color palette
+ */
+
+/* primary colors */
+$imperial-blue: #021E98;
+$primary-colors: (
+  "imperial-blue": (
+    base: $imperial-blue,
+    contrast: #ffffff
+  )
+);
+
+/* secondary colors */
+$torch-red: #FF0053;
+$oxford-blue: #3B4060;
+$mirage: #14142A;
+
+$secondary-colors: (
+  "torch-red": (
+    base: $torch-red,
+    contrast: #ffffff
+  ),
+  "oxford-blue": (
+    base: $oxford-blue,
+    contrast: #ffffff
+  ),
+  "mirage": (
+    base: $mirage,
+    contrast: #ffffff
+  )
+);
+
+/* neutral colors */
+$athens: #FF7200;
+$smoothred: #FF1A64;
+$redlight: #FFE5EE;
+$black: #000000;
+$lilac: #14142A;
+$darkblack: #29293D;
+$dark: #3E3E50;
+$ash: #535362;
+$darkash: #3B4060;
+$darkgray: #7F8296;
+$lightgray: #8F92A2;
+$dark1: #C3C4CA;
+$shade: #A1A3AF;
+$white: #ffffff;
+$shadow: #E5E5E5;
+$grayedblue: #5D617B;
+$lightblue: #E6E8F5;
+$darkblue: #4E62B7;
+$thinblue: #F7F8FF;
+$darkergray: #4C516D;
+$darkergray1: #6E7288;
+$darkergray2: #D5D5D9;
+$red1: #FF3375;
+$red2: #FF6698;
+$blue1: #1B35A2;
+$blue3: #F0FCFF;
+$blue100: #CCD2EA;
+$neutral-colors: (
+  "mirage": (
+    base: $mirage,
+    contrast: #ffffff
+  ),
+  "athens": (
+    base: $athens,
+    contrast: #ffffff
+  ),
+  "lilac": (
+    base: $lilac,
+    contrast: #ffffff
+  ),
+  "shadow": (
+    base: $shadow,
+    contrast: #ffffff
+  ),
+  "white": (
+    base: $white,
+    contrast: #ffffff
+  ),
+  "black": (
+    base: $black,
+    contrast: #ffffff
+  ),
+  "dark": (
+    base: $dark,
+    contrast: #ffffff
+  ),
+  "shade": (
+    base: $shade,
+    contrast: #ffffff
+  ),
+  "ash": (
+    base: $ash,
+    contrast: #ffffff
+  ),
+  "darkash": (
+    base: $darkash,
+    contrast: #ffffff
+  ),
+  "darkblack": (
+    base: $darkblack,
+    contrast: #ffffff
+  ),
+  "darkgray": (
+    base: $darkgray,
+    contrast: #ffffff
+  ),
+  "darkergray1": (
+    base: $darkergray1,
+    contrast: #ffffff
+  ),
+  "darkergray2": (
+    base: $darkergray2,
+    contrast: #ffffff
+  ),
+  "dark1": (
+    base: $dark1,
+    contrast: #ffffff
+  ),
+  "lightgray": (
+    base: $lightgray,
+    contrast: #ffffff
+  ),
+  "smoothred": (
+    base: $smoothred,
+    contrast: #ffffff
+  ),
+  "redlight": (
+    base: $redlight,
+    contrast: #ffffff
+  ),
+  "grayedblue": (
+    base: $grayedblue,
+    contrast: #ffffff
+  ),
+  "lightblue": (
+    base: $lightblue,
+    contrast: #ffffff
+  ),
+  "darkblue": (
+    base: $darkblue,
+    contrast: #ffffff
+  ),
+  "thinblue": (
+    base: $thinblue,
+    contrast: #ffffff
+  ),
+  "darkergray": (
+    base: $darkergray,
+    contrast: #ffffff
+  ),
+
+  "red1": (
+    base: $red1,
+    contrast: #ffffff
+  ),
+  "red2": (
+    base: $red2,
+    contrast: #ffffff
+  ),
+  "blue1": (
+    base: $blue1,
+    contrast: #ffffff
+  ),
+  "blue3": (
+    base: $blue3,
+    contrast: #ffffff
+  ),
+  "blue100": (
+    base: $blue100,
+    contrast: #ffffff
+  )
+);
+
+/* 
+ * Grid configuration
+ */
+$enable-grid-classes: true;
+
+/* 
+ * Grid breakpoints
+ * - Define the minimum dimensions at which your layout will change,
+ * - adapting to different screen sizes, for use in media queries.
+ */
+$grid-breakpoints: (
+  mb: 0,
+  tb: 768px,
+  dt: 1024px,
+  wd: 1200px
+);
+
+/* 
+ * Grid containers
+ * - Define the maximum width of `.container` for different screen sizes.
+ */
+$container-max-widths: (
+  tb: 704px,
+  dt: 920px,
+  wd: 968px
+);
+
+/* 
+ * Grid container paddings
+ * - Define the maximum padding of `.container` for different screen sizes.
+ */
+$container-paddings: (
+  mb: 32px,
+  tb: 16px
+);
+
+/* 
+ * Grid columns
+ * - Set the number of columns and specify the width of the gutters.
+ */
+$grid-columns: 12;
+$grid-gutter-width: 32px;
+$grid-mobile-gutter-width: 16px;
+
+/* 
+ * Spacer
+ * - Set the margin and padding helper classes
+ */
+$spacer-start: 0;
+$spacer-end: 40;
+$spacer-unit: px;
+
+$spacer-important: true;
+$spacer-arithmetic: true;
+$spacer-arithmetic-sequence: 4;
+
+$spacer-directions: (
+  top: t,
+  right: r,
+  bottom: b,
+  left: l
+);
+
+:root {
+  /* colors */
+  --theme-primary-color: #{$imperial-blue};
+  --theme-default-color: #{$dark};
+
+  @each $name, $color in $primary-colors {
+    --color-#{$name}: #{map-get($color, "base")};
+  }
+  @each $name, $color in $neutral-colors {
+    --color-#{$name}: #{map-get($color, "base")};
+  }
+  @each $name, $color in $secondary-colors {
+    --color-#{$name}: #{map-get($color, "base")};
+  }
+
+  /* typography */
+  --font-family-latobold: 'latoblack', sans-serif;
+  --font-family-latoregular: 'latoregular', sans-serif;
+  --font-weight: 400;
+  --font-size: 16px;
+  --line-height: 28px;
+  --letter-spacing: 0px;
+
+  /* H1 */ 
+  --heading-1-font-size: 48px;
+  --heading-1-font-weight: 800;
+  --heading-1-line-height: 54px;
+  --heading-1-letter-spacing: -2%;
+
+  /* H2 */ 
+  --heading-2-font-size: 40px;
+  --heading-2-font-weight: 700;
+  --heading-2-line-height: 52px;
+  --heading-2-letter-spacing: -1%;
+
+  /* H3 */ 
+  --heading-3-font-size: 28px;
+  --heading-3-font-weight: 700;
+  --heading-3-line-height: 40px;
+  --heading-3-letter-spacing: 0;
+
+  /* H4 */ 
+  --heading-4-font-size: 24px;
+  --heading-4-font-weight: 600;
+  --heading-4-line-height: 32px;
+  --heading-4-letter-spacing: 0;
+
+  /* H5 */ 
+  --heading-5-font-size: 20px;
+  --heading-5-font-weight: 600;
+  --heading-5-line-height: 28px;
+  --heading-5-letter-spacing: 0;
+
+  /* H6 */ 
+  --heading-6-font-size: 20px;
+  --heading-6-font-weight: 600;
+  --heading-6-line-height: 28px;
+  --heading-6-letter-spacing: 0;
+
+  // lg-bold
+  --txt-lg-bold-font-size: 20px;
+  --txt-lg-bold-font-weight: 700;
+  --txt-lg-bold-line-height: 32px;
+  --txt-lg-bold-letter-spacing: 0;
+
+  // lg
+  --txt-lg-font-size: 20px;
+  --txt-lg-font-weight: 400;
+  --txt-lg-line-height: 32px;
+  --txt-lg-letter-spacing: 0;
+
+  // md-bold
+  --txt-md-bold-font-size: 16px;
+  --txt-md-bold-font-weight: 700;
+  --txt-md-bold-line-height: 28px;
+  --txt-md-bold-letter-spacing: 0;
+
+  // sm-bold
+  --txt-sm-bold-font-size: 14px;
+  --txt-sm-bold-font-weight: 600;
+  --txt-sm-bold-line-height: 20px;
+  --txt-sm-bold-letter-spacing: 0;
+
+  // sm
+  --txt-sm-font-size: 14px;
+  --txt-sm-font-weight: 400;
+  --txt-sm-line-height: 20px;
+  --txt-sm-letter-spacing: 0;
+
+  --link-font-size: var(--font-size);
+  --link-font-weight: 600;
+  --text-transform: uppercase;
+  --link-color: var(--base-color);
+}

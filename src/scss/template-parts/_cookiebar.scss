@@ -1,0 +1,71 @@
+/* Cookie bar styles */
+.vetera-cookie {
+  position: fixed;
+  display: none;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 44px 0 40px;
+  background-color: var(--color-imperial-blue);
+  z-index: 999;
+
+  &.show {
+    display: block;
+  }
+
+  @include media-breakpoint-up(dt) {
+    padding: 40px 0;
+  }
+
+  /* Title font weight */
+  &__title {
+    font-weight: var(--txt-sm-bold-font-weight);
+  }
+
+  /* Cookie close */
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    height: 20px;
+    width: 20px;
+    background-image: url("assets/images/cookie_close.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  /* Cookie bar grid */
+  &__wrp {
+
+    /* Cookie bar grid - desktop */
+    @include media-breakpoint-up(dt) {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      grid-gap: 56px;
+      align-items: center;
+      justify-items: end;
+    }
+  }
+
+  /* Cookie bar button wrap */
+  &__btn-block {
+
+    /* Cookie bar button */
+    .btn {
+      
+      @include media-breakpoint-up(dt) {
+        max-width: 220px;
+      }
+
+      &.delete-cookie {
+
+        @include media-breakpoint-up(dt) {
+          float: left;
+        }
+      }
+    }
+  }
+
+}

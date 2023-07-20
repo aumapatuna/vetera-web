@@ -1,0 +1,118 @@
+/* Get started component styles - mobile in default */
+.vetera-for-whom-card {
+  position: relative;
+
+  /* Content styles */
+  &__content {
+
+    /* Grid wrapper styles - Desktop */
+    @include media-breakpoint-up(dt) { 
+      width: 683px;
+      margin: 0 auto;
+    }
+  }
+
+  /* Grid wrapper styles */
+  &__wrp {
+    background: rgba($imperial-blue, 0.05);
+
+    /* Grid wrapper styles - Desktop */
+    @include media-breakpoint-up(dt) {
+      background: none;
+    }
+  }
+
+  /* Grid styles */
+  &__grid {
+    position: relative;
+    display: grid;
+    width: 342px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    @include media-breakpoint-up(dt) {
+      width: 100%;
+      padding-left: 64px !important;
+      padding-right: 64px !important;
+    }
+    
+    &:before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      background: none;
+      z-index: -1;
+
+      @include media-breakpoint-up(dt) {
+        background: rgba($imperial-blue, 0.05);
+      }
+    }
+
+    .vetera-comp-product-detail-card {
+
+      &__link {
+        opacity: 1;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    /* Grid styles - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 64px;
+      padding: 48px 0 28px;
+
+      &:before {
+        position: absolute;
+        display: block;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        background: rgba($imperial-blue, 0.05);
+        border-radius: 50px;
+        z-index: -1;
+      }
+    }
+
+    /* Title font sizes */
+    .c-title {
+      font-size: var(--font-size);
+      font-weight: var(--txt-sm-bold-font-weight);
+
+      /* Title font sizes - Desktop styles */
+      @include media-breakpoint-up(dt) {
+        font-size: var(--font-size);
+        font-weight: var(--txt-md-bold-font-weight);
+        line-height: var(--txt-md-bold-line-height);
+      }
+    }
+  }
+
+  /* Card gaps */
+  .vetera-comp-product-detail-card {
+    margin-bottom: 16px;
+    padding: 4px 4px 16px!important;
+
+    /* Card gaps - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+/* Integration header styles - mobile in default */
+.vetera-integration-header {
+    position: relative;
+
+    /* Integration container styles */
+    .container {
+
+        /* Integration container styles - Desktop */
+        @include media-breakpoint-up(dt) {
+            width: 683px;
+            margin: 0 auto;
+          }
+    }
+}

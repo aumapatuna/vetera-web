@@ -1,0 +1,33 @@
+/* About author card styles - mobile in default */
+.vetera-comp-about-author-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+
+    /* About author card styles - Desktop styles */
+    @include media-breakpoint-up(dt) {
+        display: grid;
+        grid-template-columns: 1fr 8fr 3fr;
+        grid-gap: 8px;
+    }
+
+    &__icon {
+        text-align: center;
+        
+        /* Blog icon */
+        .avatar {
+            height: 44px;
+            width: 44px;
+            border-radius: 44px;
+
+            @include media-breakpoint-up(tb) {
+                height: 80px;
+                width: 80px;
+                border-radius: 80px;
+            }
+        }
+    }
+    &__media-icons {
+        text-align: center;
+    }
+}

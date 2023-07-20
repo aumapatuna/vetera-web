@@ -1,0 +1,17 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .bg#{$infix}-none {
+      background: none !important;
+    }
+
+    // Gutenberg color options
+    // -- see editor-color-palette in functions.php
+    @each $color, $value in $gutenberg-colors {
+      .has-#{$color}-color {
+        color: $value !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+/* Client records component styles - mobile in default */
+.vetera-comp-two-col-img-overflow {
+  position: relative;
+  max-width: 1280px;
+  margin: auto;
+
+  .vetera-for-whom-two-col-grid__img-blk {
+    position: static;
+    max-width: 100%;
+
+    @include media-breakpoint-up(dt) {
+
+      position: absolute;
+      width: 100%;
+      max-width: 45%;
+      top: 0;
+      right: 15px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.vetera-comp-direct-communication {
+  .vetera-for-whom-two-col-grid__img-blk {
+
+    @include media-breakpoint-up(dt) {
+      width: 105%;
+      margin-left: -5%;
+    }
+  }
+}
+
+.vetera-comp-client-records {
+  .vetera-for-whom-two-col-grid__img-blk {
+    width: 100%;
+    @include media-breakpoint-up(dt) {
+      width: 80%;
+    }
+  }
+}
+
+

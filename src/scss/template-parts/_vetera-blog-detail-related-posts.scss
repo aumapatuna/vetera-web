@@ -1,0 +1,16 @@
+/* Blog detail related posts */ 
+@include media-breakpoint-up(tb) {
+  .vetera-blog-detail-related-posts {
+
+    &__post-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 32px;
+    }
+  }
+
+  .the-excerpt {
+    height: 84px;
+    overflow: hidden;
+  }
+}

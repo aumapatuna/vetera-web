@@ -1,0 +1,24 @@
+/* Home icon card list */ 
+.vetera-home-icon-cards {
+
+  /* Content */
+  &__content {
+
+    @include media-breakpoint-up(dt) {
+      width: 683px;
+      margin: 0 auto;
+    }
+  }
+
+  /* List */ 
+  &__list {
+    display: grid;
+    row-gap: 60px;
+
+    @include media-breakpoint-up(dt) {
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 76px;
+    }
+  }
+}
+

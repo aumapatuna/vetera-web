@@ -1,0 +1,14 @@
+/* Learn more section styles */
+.vetera-about-us-learn-more {
+
+  /* Card block styles */
+  &__body {
+    color: red;
+    /* Card block styles - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 44px;
+    }
+  }
+} 

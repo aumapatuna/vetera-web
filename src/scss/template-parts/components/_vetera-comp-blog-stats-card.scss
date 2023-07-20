@@ -1,0 +1,41 @@
+/* Blog main card */
+.vetera-comp-blog-stats-card {
+
+  /* Blog main card main image */
+  &__main-image{
+    height: 264px;
+    width: auto;
+
+    /* image styles - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      height: 240px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* List title limitation */
+  .list-title {
+    height: auto;
+    
+    /* List title limitation - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      height: 62px;
+      overflow: hidden;
+    }
+  }
+
+  &__body {
+    .vetera-comp-blog-stats-card-body__reader-info {
+      img {
+        height: 44px;
+        width: auto;
+        border-radius: 44px;
+      }
+    }
+  }
+}

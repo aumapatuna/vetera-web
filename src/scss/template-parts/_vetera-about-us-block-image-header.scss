@@ -1,0 +1,48 @@
+/* Block image styles - mobile in default */
+.vetera-about-us-block-image-header {
+    position: relative;
+
+    /* Title block styles */
+    &__title-blk {
+
+        /* Title block styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        p {
+
+            /* Title block styles - Desktop styles */
+            @include media-breakpoint-up(dt) {
+                max-width: 422px;
+                margin: 0 auto;
+            }
+        }
+    }
+    
+    /* Image block styles */
+    &__image-blk {
+            width: 100%;
+            max-width: 768px;
+            height: 171px;
+            margin: 0 auto;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+
+        /* Image block styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            max-width: 1440px;
+            height: auto;
+            max-height: 651px;
+            margin: -55px auto 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

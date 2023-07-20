@@ -1,0 +1,31 @@
+/* 404 page section styles */
+.vetera-404-body {
+
+    /* 404 page main text styles */
+    &__p404 {
+        font-family: var(--font-family-latoregular);
+        font-size: 100px;
+        font-weight: 700;
+        line-height: 240px;
+        color: var(--color-lightblue);
+
+        /* 404 page main text styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            font-size: 200px;
+        }
+    }
+
+    /* 404 page main heading styles */
+    &__main-head {
+        font-family: var(--font-family-latobold);
+        font-size: var(--heading-1-font-size);
+        font-weight: var(--heading-1-font-weight);
+        line-height: var(--heading-1-line-height);
+        letter-spacing: var(--heading-1-letter-spacing);
+    }
+
+    /* 404 page description text styles */
+    &__description {
+        line-height: var(--line-height);
+    }
+}

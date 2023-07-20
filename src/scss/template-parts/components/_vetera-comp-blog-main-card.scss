@@ -1,0 +1,54 @@
+/* Blog main card */
+.vetera-comp-blog-main-card {
+  display: block;
+
+/* Blog main card grid style */
+  &__grid {
+    opacity: 1;
+
+    /* Blog main card main image style - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+  }
+
+  /* Blog main card main image */
+  &__main-image {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+
+    /* Featured item styles */
+    &--featured {
+      height: 240px;
+
+      /* Featured item styles - Desktop styles */
+      @include media-breakpoint-up(dt) {
+        height: 364px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+  }
+
+  &__body {
+    width: 100%;
+
+    .vetera-comp-blog-main-card-body__reader-info {
+      img {
+        height: 44px;
+        width: auto;
+        border-radius: 44px;
+      }
+    }
+  }
+}

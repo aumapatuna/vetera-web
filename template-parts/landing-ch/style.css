@@ -1,0 +1,87 @@
+<style>
+.home-hero .w-container .w-row {
+	margin-left: 0;
+  margin-right: 0;
+}
+/* Slider styles */
+.testimonial-slider-nav {
+  padding-top: 0;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+}
+/* Accordion block */
+.faq-accordion-item {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.faq-accordion-item:after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  right: 0;
+  background-image: url('https://uploads-ssl.webflow.com/6278a0d2f13f13d7fe80d72f/6278a0d2f13f13a9ee80d798_plus.svg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+.faq-accordion-item.active:after {
+  background-image: url('https://uploads-ssl.webflow.com/6278a0d2f13f13d7fe80d72f/6278a0d2f13f13576b80d799_minus.svg');
+}
+.accordion-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.accordion-description {
+  display: none;
+  padding-bottom: 20px;
+}
+/* Accordion with jQuery UI */
+#accordion .accordion-title {
+  position: relative;
+  border-bottom: 1px solid #D1D5DB;
+}
+#accordion .accordion-description {
+  height: auto;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #D1D5DB;
+}
+#accordion .accordion-title.ui-state-active {
+  border-bottom: none;
+}
+#accordion .ui-accordion-header-icon {
+  height: 32px;
+  width: 32px;
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background-image: url('https://assets.website-files.com/620b76b130add25c595f57f2/62177da6f1e9bd077cbf79e0_plus.svg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#accordion .accordion-title.ui-state-active .ui-accordion-header-icon {
+	background-image: url('https://assets.website-files.com/620b76b130add25c595f57f2/62177da6f1e9bd52c3bf79df_minus.svg');
+}
+#accordion .has-links .accordion-description{
+	display: inline-block;
+  border-bottom: none;
+}
+#accordion .has-links {
+	padding-bottom: 16px;
+  border-bottom: 1px solid #D1D5DB;
+}
+@media screen and (max-width: 991px) {
+  #accordion .ui-accordion-header-icon {
+    height: 24px;
+    width: 24px;
+  }
+}
+</style>

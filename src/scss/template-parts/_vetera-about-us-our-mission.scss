@@ -1,0 +1,12 @@
+/* Vetera about us our mission */
+.vetera-about-us-our-mission {
+  background-color: var(--color-imperial-blue);
+
+  &__wrp {
+
+    @include media-breakpoint-up(dt) {
+      width: 686px;
+      margin: 0 auto;
+    }
+  }
+}

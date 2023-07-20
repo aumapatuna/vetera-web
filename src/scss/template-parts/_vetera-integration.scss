@@ -1,0 +1,80 @@
+/* Integration component styles - mobile in default */
+.vetera-comp-integration {
+
+  & > .container {
+    @include media-breakpoint-down(dt) {
+      padding: 0;
+    }
+}
+
+  /* Grid styles */
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    column-gap: 0;
+
+
+    /* Grid styles - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      display: grid;
+      flex-direction: unset;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+      justify-items: end;
+    }
+  }
+
+  /* Logo styles */
+  &__logo-blk {
+    // display: grid;
+    // grid-template-columns: 120px 120px 120px 120px 120px 120px;
+    // grid-template-rows: 120px;
+    // column-gap: 15px;
+    // width: 100%;
+    // overflow: auto;
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    flex-direction: row;
+    padding-left: 20px;
+
+    /* Logo styles - Desktop styles */
+    @include media-breakpoint-up(tb) {
+      display: grid;
+      grid-gap: 16px;
+      padding: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(137px, 1fr));
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(137px, 1fr);
+      overflow-x: scroll;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    /* Logo styles - Desktop styles */
+    @include media-breakpoint-up(dt) {
+      display: grid;
+      grid-template-columns: 157px 157px 157px;
+      grid-template-rows: 177px 177px;
+      column-gap: 20px;
+      overflow: visible;
+    }
+
+    /* Logo styles - Desktop styles */
+    @include media-breakpoint-up(wd) {
+      display: grid;
+      grid-template-columns: 157px 157px 157px;
+      grid-template-rows: 177px 177px;
+      column-gap: 20px;
+      overflow: visible;
+    }
+  }
+
+  &__details {
+
+    @include media-breakpoint-down(dt) {
+      padding: 0 20px;
+    }
+  }
+}

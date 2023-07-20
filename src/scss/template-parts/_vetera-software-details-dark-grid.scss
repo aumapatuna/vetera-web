@@ -1,0 +1,106 @@
+/* Software details grid block dark */ 
+.vetera-software-details-dark-grid {
+    width: 100%;
+    background-color: var(--color-darkblack);
+
+    .veterta-products-for-section {
+
+        &__content {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+
+            /* Software details grid right block dark - Desktop styles */ 
+            @include media-breakpoint-up(dt) {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
+    }
+
+    /* Software details grid right block dark */ 
+    .vetera-comp-client-records {
+
+        &__grid {
+            grid-template-columns: 1fr;
+
+            /* Software details grid right block dark - Desktop styles */ 
+            @include media-breakpoint-up(dt) {
+                grid-template-columns: 5fr 3fr;
+            }
+        }
+    }
+
+    /* Software details grid left block dark */ 
+    .vetera-comp-direct-communication {
+
+        &__grid {
+            grid-template-columns: 1fr;
+
+            /* Software details grid left block dark - Desktop styles */ 
+            @include media-breakpoint-up(dt) {
+                grid-template-columns: 3fr 5fr;
+            }
+        }
+    }
+
+    /* Software details integration block dark */ 
+    .vetera-comp-integration-dark {
+
+        .vetera-comp-integration {
+
+            &__grid {
+                justify-items: center;
+
+                @include media-breakpoint-up(dt) {
+                    justify-items: start;
+                }
+            }
+            
+            &__logo-blk {
+
+                @include media-breakpoint-up(dt) {
+                    padding-left: 0;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: auto;
+                    align-items: center;
+                }
+
+                .integrations-logo-card {
+                  
+                    @include media-breakpoint-up(dt) {
+                        height: 157px;
+                        width: 157px;
+                    }
+                }
+            }
+        }
+
+        /* Software details integration block inverse dark */ 
+        &--inverse {
+
+            .vetera-comp-integration {
+
+                &__grid {
+
+                    /* Software details integration block inverse dark  - Desktop styles */ 
+                    @include media-breakpoint-up(dt) {
+                        flex-direction: row-reverse;
+                        grid-auto-flow: column;
+                    }
+                }
+
+                &__details {
+
+                    @include media-breakpoint-up(dt) {
+                        grid-column-end: -1;
+                    }
+                }
+            }
+        }
+    }
+}

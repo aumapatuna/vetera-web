@@ -1,0 +1,71 @@
+/* Our team section styles - mobile in default */
+.vetera-about-us-our-team {
+    position: relative;
+
+    .container {
+        padding-right: 0;
+        padding-left: 0;
+
+        @include media-breakpoint-up(dt) {
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+    }
+
+   /* Title block styles */
+   &__title-blk {
+    padding-right: 16px;
+    padding-left: 16px;
+
+        /* Title block styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            max-width: 690px;
+            margin: 0 auto;
+            padding-right: 0;
+            padding-left: 0;
+        }
+   }
+
+   /* Card block styles */
+   &__cards-blk {
+        position: relative;
+        display: grid;
+        grid-template-columns: 245px 245px 245px 245px;
+        column-gap: 25px;
+        width: 100%;
+        overflow: auto;
+
+        /* Card block styles - Desktop styles */
+        @include media-breakpoint-up(dt) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 20px;
+        }
+
+        /* Card styles updation */
+        .vetera-comp-stats-card {
+
+            /* color variants updation */
+            .txt-sm-bold {
+                color: var(--color-dark);
+            }
+            &__separator {
+                border-bottom: 2px solid rgba($torch-red, .3);
+            }
+            .h2 {
+                color: var(--color-darkblack);
+            }
+            p {
+                color: var(--color-grayedblue);
+            }
+
+            &:first-child {
+                margin-left: 16px;
+
+                @include media-breakpoint-up(dt) {
+                    margin-left: 0;
+                }
+            }
+        }
+   }
+}

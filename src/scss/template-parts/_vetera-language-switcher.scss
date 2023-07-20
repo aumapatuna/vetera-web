@@ -1,0 +1,395 @@
+/* Vetera language switcher styles */ 
+.vetera-header {
+  &__nav {
+    
+    &__language-switcher {
+      position: relative;
+      padding-left: 0;
+
+      .wpml-ls-legacy-dropdown {
+
+        @include media-breakpoint-up(dt) {
+          cursor: pointer;
+        }
+
+        ul {
+          @include media-breakpoint-up(dt) {
+            padding: 0 33px 0 0;
+            width: 88px;
+            box-sizing: border-box;
+          }
+        }
+
+        a {
+          background-color: transparent;
+          color: var(--color-imperial-blue);
+
+          &:hover,
+          &:focus {
+
+            @include media-breakpoint-up(dt) {
+              background-color: var(--color-white);
+              color: var(--color-imperial-blue);
+            }
+  
+          }
+
+          border: none;
+          }
+
+        .wpml-ls-item-toggle {
+          position: relative;
+          /* Background color - Desktop styles */
+          @include media-breakpoint-up(dt) {
+            position: relative;
+            min-width: 92px;
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 8px;
+            text-align: center;
+            line-height: 1;
+            font-weight: var(--txt-sm-font-weight);
+          } 
+
+          &:before {
+            /* Background color - Desktop styles */
+            @include media-breakpoint-up(dt) {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              margin: auto 0;
+              height: 24px;
+              width: 24px;
+              display: block;
+              content: "";
+              background-image: url(assets/images/earth-fill.svg);
+              background-repeat: no-repeat;
+              background-position: center center;
+              background-size: cover;
+            }
+          }
+
+          &:after {
+            /* Background color - Desktop styles */
+            @include media-breakpoint-up(dt) {
+              position: absolute;
+              top: 50%;
+              bottom: 50%;
+              right: -6px;
+              margin: auto 0;
+              display: block;
+              content: "";
+              height: 5px;
+              width: 9px;
+              background-image: url(assets/images/icons/nav-down-arrow.svg);
+              background-repeat: no-repeat;
+              background-position: center center;
+              background-size: cover;
+              border: none;
+            }
+          }
+
+          span {
+            /* Background color - Desktop styles */
+            @include media-breakpoint-up(dt) {
+              padding-left: 5px;
+              color: var(--color-imperial-blue);
+            }
+          }
+
+          &:hover,
+          &:focus{
+            background-color: transparent;
+            color: var(--color-imperial-blue);
+          }
+
+        }
+
+        .wpml-ls-item-toggle.active {
+          font-weight: var(--txt-sm-bold-font-weight);
+
+          &:after {
+            /* Background color - Desktop styles */
+            @include media-breakpoint-up(dt) {
+              transform: rotate(180deg);
+            }
+          }
+        }
+
+        .wpml-ls-current-language{
+          &:hover>a {
+            background-color: transparent;
+            color: var(--color-imperial-blue);
+          }
+
+          .wpml-ls-sub-menu {
+            @include media-breakpoint-up(dt) {
+              visibility: hidden;
+            }
+          }
+        }
+      }
+
+      &:before {
+        /* Background color - Desktop styles */
+        @include media-breakpoint-up(dt) {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto 0;
+          height: 24px;
+          width: 24px;
+          display: none; // Will be block later
+          content: "";
+          background-image: url(assets/images/earth-fill.svg);
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+        }
+      }
+
+      /* Language toggle - Desktop styles */
+      .lang-wrp {
+        display: none;
+
+        @include media-breakpoint-up(wd) {
+          display: none;
+        }
+
+        .lang-list {
+          /* Language hover - Desktop styles */
+          @include media-breakpoint-up(wd) {
+            position: absolute;
+            content: "";
+            top: 62px;
+            left: 6px;
+            min-width: 125px;
+            background: #fff;
+            padding: 16px 16px;
+            border-radius: 4px;
+            box-shadow: 0px 4px 12px rgba(17, 17, 17, 0.08);
+            transition: all 0.3s ease;
+          }
+
+          .wpml-ls-slot-language_switcher {
+            /* Language hover - Desktop styles */
+            @include media-breakpoint-up(wd) {
+              margin-right: 0;
+              margin-bottom: 16px;
+              padding: 0 16px 16px;
+              border-bottom: 1px solid var(--color-lightblue);
+              pointer-events: all;
+              text-align: center;
+            }
+
+            &:last-child {
+              /* Language hover - Desktop styles */
+              @include media-breakpoint-up(wd) {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: none;
+              }
+            }
+
+            a {
+              /* Language hover - Desktop styles */
+              @include media-breakpoint-up(wd) {
+                color: var(--color-imperial-blue);
+              }
+            }
+          }
+
+          .wpml-ls-sub-menu {
+            display: none;
+          }
+        }
+      }
+      .lang-wrp.active {
+        /* Language hover - Desktop styles */
+        @include media-breakpoint-up(dt) {
+          display: block;
+        }
+      }
+    }
+
+    span.mob.language-switcher {
+      padding: 0 23px;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      text-align: center;
+      list-style: none;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        left: 23px;
+        margin: auto 0;
+        height: 24px;
+        width: 24px;
+        display: none; // Will be block later
+        content: "";
+        background-image: url(assets/images/earth-fill.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
+
+      /* Background color - Desktop styles */
+      @include media-breakpoint-up(dt) {
+        display: none;
+      }
+
+      .wpml-ls-slot-language_switcher {
+        margin-bottom: 0;
+
+        @include media-breakpoint-up(dt) {
+          pointer-events: none;
+        }
+      }
+
+      a {
+        color: var(--color-imperial-blue);
+      }
+
+      .wpml-ls-first-item{
+        position: relative;
+      }
+
+    }
+    .wpml-ls-link {
+      color: #6778C1 !important;
+      font-weight: var(--txt-sm-font-weight);
+
+      .wpml-ls-native {
+        display: none;
+      }
+
+      .wpml-ls-display {
+
+        .wpml-ls-bracket {
+          display: none;
+        }
+
+      }
+    }
+  }
+
+  /* Language in mobile */
+  .mob-lang {
+    width: 100%;
+    display: block;
+    padding: 0 23px;
+    box-sizing: border-box;
+
+    @include media-breakpoint-down(wd) {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 23px 66px;
+    }
+
+    .lang-wrp {
+      display: block;
+
+      .lang-list {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;      
+        text-align: center;
+
+        &:before {
+          position: absolute;
+          display: block; // Will be block later
+          content: "";
+          left: 0;
+          top: 2px;
+          height: 24px;
+          width: 24px;
+          background-image: url(assets/images/earth-fill.svg);
+          background-repeat: no-repeat;
+          background-size: auto;
+          background-position: center center;
+        }
+
+        .wpml-ls-slot-language_switcher {
+          a {
+            color: var(--color-imperial-blue);
+            font-weight: var(--txt-sm-bold-font-weight);
+          }
+
+          span.wpml-ls-display {
+            font-weight: var(--txt-sm-font-weight);
+          }
+        }
+
+      }
+
+      .wpml-ls-sub-menu {
+        display: inline-block !important;
+      }
+    }
+  }
+
+}
+
+/* Below styles should remove when we enable language switrcher */ 
+
+@include media-breakpoint-up(wd) {
+  // .vetera-header__nav__language-switcher {
+  //   width: 0;
+  //   height: 0;
+  //   padding-left: 0;
+  // }
+
+  .vetera-header__nav nav {
+    margin-right: 0;
+  }
+
+  ul.vetera-header__nav__list {
+    padding-left: 0;
+  }
+  .vetera-header__nav__action-buttons {
+    position: relative;
+    justify-content: flex-end;
+
+    &:before {
+      position: absolute;
+      content: "";
+      display: block;
+      top: 0;
+      left: -24px;
+      height: 100%;
+      width: 1px;
+      background: var(--color-lightblue);
+      opacity: 0.5;
+    }
+  }
+  .vetera-header__wrapper {
+      grid-template-columns: 1fr 7.5fr;
+  }
+  .vetera-header__nav {
+    grid-template-columns: 5fr 1fr 2fr;
+  }
+}
+
+
+/* Hide language switcher temporary */
+.vetera-header__nav__language-switcher,
+.vetera-header__nav__language-switcher.mob-lang,
+.vetera-header .mob-lang,
+.vetera-header__nav__action-buttons:before {
+  display: none !important;
+}
+.vetera-header__nav {
+  @include media-breakpoint-up(dt) {
+    grid-template-columns: 5fr 2fr !important;
+  }
+}
+
+.vetera-header__nav nav {
+  margin-right: 24px;
+}

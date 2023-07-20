@@ -1,0 +1,486 @@
+/********** CODE NEED TO FORMAT OF THIS FILE ****************/ 
+
+/* Header */ 
+.vetera-header {
+  padding: 24px 0;
+  background-color: transparent;
+
+  /* Header wrapper */ 
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Branding */ 
+  &__branding {
+    width: 100px;
+    height: 40px;
+
+    a {
+      opacity: 1;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  /* Nav */ 
+  &__nav {
+    display: none;
+  }
+
+  /* Mobile menu icon */ 
+  &__mobile-menu-icon {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+  }
+
+  /* Branding */ 
+  &__branding {
+    width: 50%;
+    height: 32px;
+    background-color: transparent;
+  }
+
+  /* Branding image */ 
+  &__branding-img {
+    width: 157px;
+    max-width: 100%;
+  }
+}
+
+// .current-menu-parent {
+
+//   > a {
+//     font-weight: var(--txt-md-bold-font-weight) !important;
+//   }
+// }
+
+.vetera-header__nav {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-color: #795548;
+  left: 0;
+  top: 88px;
+  padding-top: 30px;
+}
+
+.vetera-header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: red;
+}
+
+.vetera-header {
+  height: 88px;
+}
+
+.vetera-header__nav li {
+  margin-bottom: 16px;
+}
+
+.vetera-header {
+  position: fixed;
+  z-index: 99;
+}
+
+.vetera-header__nav.vetera-header__nav--expanded {
+  display: block;
+}
+
+.vetera-header__nav li:last-child {
+  margin-bottom: 0;
+}
+
+.vetera-header__nav {
+  margin-bottom: 20px;
+  padding-bottom: 40px;
+}
+
+ul.vetera-header__nav__list {
+  margin-bottom: 20px;
+}
+
+.vetera-header__nav__language-switcher {
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  margin-bottom: 71px;
+}
+
+.vetera-header__nav__action-buttons {
+  padding: 0 40px;
+
+  @include media-breakpoint-down(wd) {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+}
+
+.vetera-header__nav__action-buttons .btn {
+  width: 100%;
+}
+
+.vetera-header__nav__action-buttons .btn:first-child {
+  margin-bottom: 24px;
+}
+
+.vetera-header__nav a.btn {
+  padding-left: initial;
+}
+
+a.vetera-header__nav__dropdown-list-item-link {
+  //display: flex;
+  display: -webkit-inline-box;
+  align-items: center;
+}
+
+span.vetera-header__nav__dropdown-list-link-item-icon {
+  display: block;
+}
+
+span.vetera-header__nav__dropdown-list-link-item-icon {
+  width: 24px;
+  height: 24px;
+}
+
+span.vetera-header__nav__dropdown-list-item-link-txt {
+  display: block;
+  padding-left: 24px;
+}
+
+li.vetera-header__nav__dropdown-list-item {
+  margin-bottom: 24px;
+}
+
+a.vetera-header__nav__item-link.vetera-header__nav__item-link--with-arrow {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+a.vetera-header__nav__item-link.vetera-header__nav__item-link--with-arrow:before {content: '';width: 9px;height: 5px;background-color: red;position: absolute;top: 50%;left: 0;transform: translateY(-50%);
+  background-color: transparent;
+      background-image: url('assets/images/icons/nav-down-arrow.svg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+}
+
+.vetera-header__nav a {
+  padding-left: 0;
+}
+
+ul.vetera-header__nav__list {
+  padding-left: 23px;
+}
+ul.vetera-header__nav__dropdown-list {
+  padding-left: 24px;
+  display: none;
+}
+
+a.vetera-header__nav__item-link.vetera-header__nav__item-link--with-arrow.expanded:before {
+  transform: rotate(180deg);
+}
+
+.vetera-header__nav {
+  background: transparent;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04);
+}
+
+.vetera-header__mobile-menu-icon {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.vetera-header__mobile-menu-icon.vetera-header__mobile-menu-icon--active .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.vetera-header__mobile-menu-icon.vetera-header__mobile-menu-icon--active .bar2 {opacity: 0;}
+
+.vetera-header__mobile-menu-icon.vetera-header__mobile-menu-icon--active .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.bar1, .bar2, .bar3 {width: 24px;height: 2px;background-color: rgba(27, 53, 162, 1);}
+
+.vetera-header__mobile-menu-icon {
+    width: 24px;
+    height: auto;
+    background-color: transparent;
+}
+
+.vetera-header__mobile-menu-icon.vetera-header__mobile-menu-icon--active .bar1 {
+    transform: rotate(-45deg) translate(-4px, 3px);
+}
+
+.vetera-header.vetera-header--fixed {
+  background-color: #fff;
+  box-shadow: 0px 4px 12px rgba(17, 17, 17, 0.08);
+  /* padding: 15px 0; */
+}
+
+.vetera-header {
+  transition: all 0.4s ease;
+  background-color: transparent;
+}
+
+.vetera-header__nav {
+
+  @include media-breakpoint-down(wd) {
+    background-color: #ffffff;
+  }
+  
+  @include media-breakpoint-down(dt) {
+    height: calc(100vh - 88px);
+    overflow: scroll;
+  }
+}
+
+/* Desktop */ 
+@include media-breakpoint-up(wd) {
+  .vetera-header__mobile-menu-icon {
+    display: none;
+  }
+.vetera-header__nav {
+  display: grid !important;
+  top: auto;
+  left: auto;
+  right: auto;
+  padding-top: 0;
+  height: auto;
+  box-shadow: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  grid-template-columns: 5fr 1fr 2fr;
+  background-color: transparent;
+  align-items: center;
+  position: relative;
+}
+.vetera-header__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.vetera-header__nav__list .menu {
+  display: inline-flex;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.vetera-header__nav__language-switcher {
+  margin-bottom: 0;
+  background-color: red;
+  width: 89px;
+  height: 28px;
+  margin-right: 48px;
+  margin-left: 20px;
+  //margin-left: 32px;
+}
+
+.vetera-header__nav__action-buttons {
+  display: inline-flex;
+  padding: 0;
+}
+
+.vetera-header__nav a.btn {
+  min-width: 150px;
+  width: auto;
+  padding: 0 20px;
+  margin-bottom: 0 !important;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0;
+}
+
+.vetera-header__nav li {
+  margin-bottom: 0;
+  margin-right: 32px;
+}
+
+header.vetera-header {
+  height: auto;
+}
+
+ul.vetera-header__nav__dropdown-list {
+  position: absolute;
+}
+
+a.vetera-header__nav__item-link.vetera-header__nav__item-link--with-arrow {
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 15px;
+}
+
+.vetera-header__nav li:last-child {
+  margin-right: 0;
+}
+
+.vetera-header__branding-img {
+  width: 157px;
+}
+
+.vetera-header__branding {
+  width: 157px;
+}
+
+.vetera-header__nav a.btn {
+    min-height: 40px;
+    height: auto;
+    padding: 5px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.vetera-header__nav a.btn:first-child {
+  margin-right: 24px;
+}
+
+.vetera-header__nav nav {
+  margin-right: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+a.vetera-header__nav__item-link.vetera-header__nav__item-link--with-arrow:before {
+  left: auto;
+  right: 0;
+}
+ul.vetera-header__nav__dropdown-list {
+  background-color: #fff;
+  box-shadow: 0px 4px 12px rgba(17, 17, 17, 0.08);
+  border-radius: 4px;
+  padding: 24px 24px 60px 24px;
+  /* display: grid !important; */
+  column-count: 2;
+  column-gap: 32px;
+  top: 70px;
+}
+
+li.vetera-header__nav__dropdown-list-item.vetera-header__nav__dropdown-list-item--single {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+li.vetera-header__nav__dropdown-list-item {
+  margin-right: 0;
+  margin-bottom: 24px;
+}
+
+ul.vetera-header__nav__dropdown-list.vetera-header__nav__dropdown-list--three-col {
+  column-count: 3;
+}
+
+li.vetera-header__nav__dropdown-list-item.vetera-header__nav__dropdown-list-item--single {
+  width: 95%;
+  /* background-color: red; */
+  padding: 12px 0 0;
+  border-top: 1px solid #eee;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12px;
+}
+
+
+
+.vetera-header > .container {
+  max-width: 1440px;
+}
+
+ul.vetera-header__nav__dropdown-list {
+  display: block !important;
+  transition: all 0.3s ease;
+}
+
+ul.vetera-header__nav__dropdown-list {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+ul.vetera-header__nav__dropdown-list.sub-open {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+li.vetera-header__nav__dropdown-list-item.vetera-header__nav__dropdown-list-item--single a.link {
+  padding-left: 8px;
+}
+.vetera-header__nav__language-switcher {
+  background-color: transparent;
+}
+
+ul.vetera-header__nav__list {
+  margin-bottom: 0;
+}
+
+.vetera-header__nav__language-switcher img {
+  width: 84px;
+}
+li.vetera-header__nav__dropdown-list-item.vetera-header__nav__dropdown-list-item--single a {
+  font-weight: 500;
+  font-family: var(--font-family-latoregular);
+}
+li.vetera-header__nav__dropdown-list-item.vetera-header__nav__dropdown-list-item--single .link--secondary:after {
+  background-image: url('assets/images/icons/nav-right-arrow.svg');
+  top: 58%;
+    transform: translateY(-58%);
+}
+li.vetera-header__nav__dropdown-list-item.vetera-header__nav__dropdown-list-item--single {
+  padding-left: 15px;
+}
+ul.vetera-header__nav__dropdown-list {
+  pointer-events: none;
+  backface-visibility: hidden;
+}
+
+ul.vetera-header__nav__dropdown-list.sub-open {
+  pointer-events: initial;
+  backface-visibility: visible;
+}
+/*
+.vetera-header__nav__item-link.vetera-header__nav__item-link--with-arrow:hover ~ ul.vetera-header__nav__dropdown-list {
+  transform: translateY(0);
+  opacity: 1;
+} */ 
+
+
+.vetera-header__nav__item--has-dropdown {
+  .sub-menu {
+      pointer-events: none;
+      backface-visibility: hidden;
+      opacity: 0;
+      transform: translateY(20px);
+
+      .sub-open {
+        pointer-events: all;
+        backface-visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+      }
+  }
+}
+
+
+}
